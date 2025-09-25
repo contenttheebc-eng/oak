@@ -36,18 +36,18 @@ const OakssConsultWebsite = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section
-        className="relative text-white px-10 bg-no-repeat bg-cover bg-blend-overlay bg-neutral-500"
+        className="relative text-white  md:px-10 bg-no-repeat bg-cover bg-blend-overlay bg-neutral-500"
         style={{
-          backgroundImage: `url("/cloudinary/1.jpg")`,
+          backgroundImage: `url("/cloudinary/2.jpg")`,
         }}
       >
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="relative md:max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-24">
           <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-3xl md:text-6xl font-bold mb-6 leading-tight">
               Scaling Businesses,
               <br />
-              <span className="text-amber-300">Building Leaders</span>
+              <span className="text-amber-300">Building Teams</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8  leading-relaxed md:w-3/4">
               Practical management, training & consulting for entrepreneurs,
@@ -56,7 +56,7 @@ const OakssConsultWebsite = () => {
             <div className="flex  gap-4">
               <Link
                 href="/events"
-                className="bg-white text-amber-900 hover:bg-amber-50 text-lg px-8 py-4 flex"
+                className="bg-white text-amber-900 hover:bg-amber-50 md:text-lg px-4 md:px-8 py-2 md:py-4 flex"
               >
                 Book a Consultation
                 <ArrowRight className="ml-2 h-5 w-5 self-center" />
@@ -67,12 +67,14 @@ const OakssConsultWebsite = () => {
       </section>
 
       {/* Who We Are */}
-      <section id="who-we-are" className="py-20 bg-gray-50">
+      <section id="who-we-are" className="py-10 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-5xl  text-amber-900 mb-6">Who We Are</h2>
+            <h2 className="text-3xl md:text-5xl  text-amber-900 mb-6">
+              Who We Are
+            </h2>
             <div className="max-w-4xl mx-auto">
-              <div className="text-xl text-gray-700 leading-relaxed mb-8">
+              <div className="text-sm md:text-xl text-gray-700 leading-relaxed mb-8">
                 <p>
                   Oakss Consult Ltd is a high-impact business growth and
                   management consultancy.
@@ -87,22 +89,14 @@ const OakssConsultWebsite = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-4 h-[420px] gap-x-2 ">
-            <div className="md:col-span-2">
+          <div className="grid grid-cols-4 md:h-[420px] gap-x-2  ">
+            <div className="col-span-2">
               <img
-                src="/cloudinary/20.jpg"
+                src="/cloudinary/21.jpg"
                 alt="Who We Are"
                 className="object-cover h-full "
               />
             </div>
-            <div>
-              <img
-                src="/cloudinary/7.jpg"
-                alt="Who We Are"
-                className="w-full h-full "
-              />
-            </div>
-
             <div>
               <img
                 src="/cloudinary/15.jpg"
@@ -110,17 +104,25 @@ const OakssConsultWebsite = () => {
                 className="w-full h-full "
               />
             </div>
+
+            <div>
+              <img
+                src="/cloudinary/6.jpg"
+                alt="Who We Are"
+                className="w-full h-full "
+              />
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center pt-20">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center pt-20">
             <div>
-              <Card className="border-l-4 border-l-amber-600 shadow-lg">
-                <CardHeader>
+              <Card className="border-l-4 border-l-amber-600 shadow-lg ">
+                <CardHeader className="px-3 md:px-6">
                   <CardTitle className="text-2xl text-amber-900">
                     Our Mission
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="px-3 md:px-6">
                   <p className=" text-gray-700">
                     To empower organisations and individuals with the skills,
                     strategies, and mindset to grow with purpose, lead with
@@ -131,12 +133,12 @@ const OakssConsultWebsite = () => {
             </div>
             <div>
               <Card className="border-l-4 border-l-green-600 shadow-lg">
-                <CardHeader>
+                <CardHeader className="px-3 md:px-6">
                   <CardTitle className="text-2xl text-green-700">
                     Our Values
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="px-3 md:px-6">
                   <div className="flex flex-wrap gap-2">
                     {[
                       "Practicality",
@@ -162,11 +164,13 @@ const OakssConsultWebsite = () => {
       </section>
 
       {/* Services */}
-      <section id="services" className="pt-20 bg-white">
+      <section id="services" className=" md:pt-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl  text-amber-900 mb-6">What We Do</h2>
-            <p className="text-xl text-gray-600  mx-auto">
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="text-3xl md:text-5xl  text-amber-900 mb-6">
+              What We Do
+            </h2>
+            <p className="text-sm md:text-xl text-gray-600  mx-auto">
               Our comprehensive suite of services designed to accelerate your
               growth and leadership development
             </p>
@@ -174,7 +178,7 @@ const OakssConsultWebsite = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             <Card className="hover:shadow-lg transition-shadow duration-300 ">
-              <CardHeader>
+              <CardHeader className="px-3 md:px-6">
                 <div className="h-32">
                   <img
                     src="/cloudinary/22.jpg"
@@ -182,16 +186,13 @@ const OakssConsultWebsite = () => {
                     className="w-full  object-cover rounded-md"
                   />
                 </div>
-                {/* <CardTitle className="text-lg pt-4">
-                  Business Growth Strategy
-                </CardTitle> */}
               </CardHeader>
-              <CardHeader>
+              <CardHeader className="px-3 md:px-6">
                 <CardTitle className="text-lg pt-4">
                   Business Growth Strategy & Management
                 </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="px-3 md:px-6">
                 <p className="text-gray-600">
                   Workshops, short courses, and bespoke training for team
                   managers, leaders, behavioural leadership, and performance
@@ -201,7 +202,7 @@ const OakssConsultWebsite = () => {
             </Card>
 
             <Card className="hover:shadow-lg transition-shadow duration-300">
-              <CardHeader>
+              <CardHeader className="px-3 md:px-6">
                 <div className="h-32">
                   <img
                     src="/cloudinary/23.jpg"
@@ -213,7 +214,7 @@ const OakssConsultWebsite = () => {
               <CardHeader>
                 <CardTitle className="text-lg pt-4">Consulting</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="px-3 md:px-6">
                 <p className="text-gray-600">
                   Personal coaching, strategy review, problem-solving sessions,
                   and long-term consultancy engagements for founders, CEOs, and
@@ -223,7 +224,7 @@ const OakssConsultWebsite = () => {
             </Card>
 
             <Card className="hover:shadow-lg transition-shadow duration-300">
-              <CardHeader>
+              <CardHeader className="px-3 md:px-6">
                 <div className="h-32">
                   <img
                     src="/cloudinary/8.jpg"
@@ -232,12 +233,12 @@ const OakssConsultWebsite = () => {
                   />
                 </div>
               </CardHeader>
-              <CardHeader>
+              <CardHeader className="px-3 md:px-6">
                 <CardTitle className="text-lg pt-4">
                   Staff Performance Operations
                 </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="px-3 md:px-6">
                 <p className="text-gray-600">
                   Build effective structures, processes, KPI setting, and staff
                   accountability systems for your business.
@@ -246,7 +247,7 @@ const OakssConsultWebsite = () => {
             </Card>
 
             <Card className="hover:shadow-lg transition-shadow duration-300">
-              <CardHeader>
+              <CardHeader className="px-3 md:px-6">
                 <div className="h-32">
                   <img
                     src="/cloudinary/11.jpg"
@@ -255,12 +256,12 @@ const OakssConsultWebsite = () => {
                   />
                 </div>
               </CardHeader>
-              <CardHeader>
+              <CardHeader className="px-3 md:px-6">
                 <CardTitle className="text-lg pt-4">
                   Training for Students & Emerging Professionals
                 </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="px-3 md:px-6">
                 <p className="text-gray-600">
                   Undergraduate workshops, soft skills, early leadership, career
                   preparation, and business fundamentals.
@@ -275,49 +276,53 @@ const OakssConsultWebsite = () => {
       <WorkCarousel />
 
       {/* Testimonials */}
-      <section id="testimonials" className="py-20 bg-white">
+      <section id="testimonials" className="py-10 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl text-amber-900 mb-6">
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="text-3xl md:text-5xl text-amber-900 mb-6">
               What Our Clients Say
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="border-l-4 border-l-amber-600 shadow-lg">
-              <CardContent className="">
+              <CardContent className="px-3 md:px-6">
                 <div>
                   <img
-                    src="/cloudinary/customer.jpg"
+                    src="/cloudinary/client2.jpg"
                     alt="Client 1"
-                    className="w-full h-60 object-cover  rounded-md"
+                    className="w-full h-52 md:h-72 object-cover  rounded-md"
                   />
                 </div>
 
-                <p className="text-lg text-gray-700 mb-4 italic">
+                <p className="text-sm md:text-lg text-gray-700 mb-4 italic">
                   &quot;Through Oakss Consult&apos;s training our management
                   team aligned on performance metrics and improved our
                   output.&quot;
                 </p>
-                <p className="text-sm text-gray-500">— CEO, Hairs Company</p>
+                <p className="text-xs md:text-sm text-gray-500">
+                  — CEO, Hairs Company
+                </p>
               </CardContent>
             </Card>
 
             <Card className="border-l-4 border-l-green-600 shadow-lg">
-              <CardContent className="">
+              <CardContent className="px-3 md:px-6">
                 <div>
                   <img
-                    src="/cloudinary/customer2.jpg"
+                    src="/cloudinary/client1.jpg"
                     alt="Client 1"
-                    className="w-full h-60 object-cover object-top rounded-md"
+                    className="w-full h-52 md:h-72 object-cover object-top rounded-md"
                   />
                 </div>
 
-                <p className="text-lg text-gray-700 mb-4 italic">
+                <p className="text-sm md:text-lg text-gray-700 mb-4 italic">
                   &quot;The student workshop helped me feel much more confident
                   stepping into leadership roles.&quot;
                 </p>
-                <p className="text-sm text-gray-500">— Student, ONI I.</p>
+                <p className="text-xs md:text-sm text-gray-500">
+                  — Student, ONI I.
+                </p>
               </CardContent>
             </Card>
           </div>

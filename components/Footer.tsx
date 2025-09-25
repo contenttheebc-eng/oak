@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <h3 className="text-3xl  mb-4">Oakss Consult Ltd</h3>
+            <h3 className="text-xl md:text-3xl  mb-4">Oakss Consult Ltd</h3>
             <p className=" mb-4 font-thin">
               Scaling Businesses, Building Leaders. Practical management,
               training & consulting for entrepreneurs, teams & institutions.
@@ -35,8 +35,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className=" mb-4 text-3xl">Services</h4>
-            <ul className="space-y-2 font-thin ">
+            <h4 className=" mb-4 text-xl md:text-3xl">Services</h4>
+            <ul className="space-y-2 font-thin text-sm md:text-base ">
               <li>Business Growth Strategy</li>
               <li>Consulting & Coaching</li>
               <li>Staff Performance</li>
@@ -45,8 +45,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-3xl mb-4">About</h4>
-            <ul className="space-y-2 font-thin ">
+            <h4 className="text-xl md:text-3xl mb-4">About</h4>
+            <ul className="space-y-2 font-thin text-sm md:text-base ">
               <li>what we Do</li>
               <li>Our Services</li>
               <li>Testimonials</li>
@@ -56,7 +56,7 @@ export default function Footer() {
 
         <Separator className="my-8 bg-gray-700" />
 
-        <div className="text-center font-thin ">
+        <div className="text-sm md:text-base text-center font-thin ">
           <p>&copy; 2025 Oakss Consult Ltd. All rights reserved.</p>
         </div>
       </div>

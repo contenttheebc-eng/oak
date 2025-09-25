@@ -117,7 +117,8 @@ export default function EventRegistrationForm({
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-[425px]">
+      {/* sm:max-w-[425px] */}
+      <DialogContent className="md:max-w-[425px] ">
         <DialogHeader>
           <DialogTitle>Event Registration</DialogTitle>
           <DialogDescription>
@@ -126,7 +127,7 @@ export default function EventRegistrationForm({
         </DialogHeader>
 
         <Form {...form}>
-          <div className="space-y-4">
+          <div className="space-y-4 ">
             <FormField
               control={form.control}
               name="name"

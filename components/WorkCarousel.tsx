@@ -161,10 +161,12 @@ const WorkCarousel: React.FC = () => {
   );
 
   return (
-    <section id="work-with-us" className="py-20">
+    <section id="work-with-us" className="py-10 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl text-amber-900 mb-6">Why Work With Us</h2>
+        <div className="text-center  md:mb-16">
+          <h2 className="text-3xl md:text-5xl text-amber-900 mb-3 md:mb-6">
+            Why Work With Us
+          </h2>
         </div>
 
         <div className="relative">
@@ -175,20 +177,20 @@ const WorkCarousel: React.FC = () => {
           >
             <CarouselContent className="gap-x-4">
               {features.map((feature: Feature, index: number) => (
-                <CarouselItem key={index} className="h-[450px] w-full">
-                  <div className="p-3 grid grid-cols-[1.8fr_1.2fr] gap-6">
+                <CarouselItem key={index} className="md:h-[450px] w-full">
+                  <div className="p-3 grid md:grid-cols-[1.8fr_1.2fr] gap-6">
                     <div>
                       <img
                         src={feature.image}
                         alt={feature.title}
-                        className="object-cover w-full h-96 object-top "
+                        className="object-cover w-full h-48 md:h-96 object-top "
                       />
                     </div>
                     <div className="flex flex-col justify-center space-y-4">
-                      <div className="text-amber-900 text-3xl">
+                      <div className="text-amber-900 text-xl md:text-3xl">
                         {feature.title}
                       </div>
-                      <div className="font-light text-xl">
+                      <div className="font-light md:text-xl">
                         {feature.description}
                       </div>
                     </div>
@@ -199,7 +201,7 @@ const WorkCarousel: React.FC = () => {
           </Carousel>
 
           {/* Custom Navigation Controls */}
-          <div className="flex items-center justify-center mt-8 gap-6">
+          <div className="flex items-center justify-center md:mt-8 gap-6">
             {/* Previous Button */}
             <button
               onClick={scrollPrev}

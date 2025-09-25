@@ -38,20 +38,20 @@ export default function PageEvent() {
   };
   return (
     <>
-      <section className="bg-gradient-to-r from-amber-900 to-amber-700 text-white py-24">
+      <section className="bg-gradient-to-r from-amber-900 to-amber-700 text-white  py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">
             Events & Consultation
           </h1>
-          <p className="text-xl text-amber-100">
+          <p className="md:text-xl text-amber-100">
             Stay connected with our workshops and book your consultation
             sessions
           </p>
         </div>
       </section>
-      <section className="py-20 bg-gray-50">
+      <section className="py-10 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">
+          <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-12">
             Upcoming Trainings & Events
           </h2>
 
@@ -125,8 +125,8 @@ export default function PageEvent() {
               </CardContent>
             </Card> */}
             <Card className="border-l-4 border-l-amber-600 shadow-lg">
-              <CardHeader>
-                <div className="h-64 mb-4">
+              <CardHeader className="px-3 md:px-6">
+                <div className="h-52 md:h-64 mb-4">
                   <img
                     src="/cloudinary/8.jpg"
                     alt="Managing Humans, Not Just Roles, to Deliver Goals"
@@ -145,18 +145,18 @@ export default function PageEvent() {
                   </Badge>
                 </div>
               </CardHeader>
-              <CardContent>
-                <CardTitle className="text-2xl text-amber-900 mb-2">
+              <CardContent className="px-3 md:px-6">
+                <CardTitle className="text-lg md:text-2xl text-amber-900 mb-2">
                   Managing Humans, Not Just Roles, to Deliver Goals
                 </CardTitle>
-                <CardDescription className="text-lg mb-4">
+                <CardDescription className="text-sm md:text-lg mb-4">
                   <div className="flex items-center text-gray-600 mb-2">
                     <Calendar className="h-5 w-5 mr-2" />
                     Thursday, 16th October, 2025 - Online Workshop
                   </div>
                 </CardDescription>
 
-                <p className="text-gray-700 mb-6 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-700 mb-6 leading-relaxed">
                   In today&apos;s business world, success is not about assigning
                   tasks, it is about empowering people. Many managers and
                   business owners fall into the trap of managing roles instead
@@ -164,7 +164,7 @@ export default function PageEvent() {
                   disengagement, and missed opportunities.
                 </p>
 
-                <div className="mb-6">
+                <div className="mb-6 text-sm md:text-base">
                   <h4 className="font-semibold text-gray-900 mb-3">
                     This interactive workshop will help you:
                   </h4>
@@ -203,8 +203,8 @@ export default function PageEvent() {
             {/* Other Events */}
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="hover:shadow-lg transition-shadow duration-300">
-                <CardHeader>
-                  <div className="h-64">
+                <CardHeader className="px-3 md:px-6">
+                  <div className="h-52 md:h-64">
                     <img
                       src="/cloudinary/17.jpg"
                       alt="Business Growth Strategy"
@@ -212,17 +212,17 @@ export default function PageEvent() {
                     />
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <CardTitle className="text-xl text-gray-900 mb-2">
+                <CardContent className="px-3 md:px-6">
+                  <CardTitle className="md:text-xl text-gray-900 mb-2">
                     Scaling Strategies for SMEs
                   </CardTitle>
-                  <CardDescription className="mb-4">
+                  <CardDescription className="mb-4 text-sm md:text-base">
                     <div className="flex items-center text-gray-600">
                       <Calendar className="h-4 w-4 mr-2" />
                       12 November 2025 - Online Webinar
                     </div>
                   </CardDescription>
-                  <p className="text-gray-700 mb-4">
+                  <p className="text-gray-700 mb-4 text-sm md:text-base">
                     Learn proven strategies to scale your small to medium
                     enterprise effectively and sustainably.
                   </p>
@@ -237,8 +237,8 @@ export default function PageEvent() {
               </Card>
 
               <Card className="hover:shadow-lg transition-shadow duration-300">
-                <CardHeader>
-                  <div className="h-64">
+                <CardHeader className="px-3 md:px-6">
+                  <div className="h-52 md:h-64">
                     <img
                       src="/cloudinary/23.jpg"
                       alt="Student Business Readiness Bootcamp"
@@ -246,17 +246,17 @@ export default function PageEvent() {
                     />
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <CardTitle className="text-xl text-gray-900 mb-2">
+                <CardContent className="px-3 md:px-6">
+                  <CardTitle className="md:text-xl text-gray-900 mb-2">
                     Student Business Readiness Bootcamp
                   </CardTitle>
-                  <CardDescription className="mb-4">
+                  <CardDescription className="mb-4 text-sm md:text-base">
                     <div className="flex items-center text-gray-600">
                       <Calendar className="h-4 w-4 mr-2" />
                       15 December 2025 - Virtual
                     </div>
                   </CardDescription>
-                  <p className="text-gray-700 mb-4">
+                  <p className="text-gray-700 mb-4 text-sm md:text-base">
                     Comprehensive bootcamp preparing students for the business
                     world with essential skills and knowledge.
                   </p>
@@ -274,13 +274,13 @@ export default function PageEvent() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-10 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-6">
               Consultation & Coaching
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="md:text-xl text-gray-600 max-w-3xl mx-auto">
               Our consultation portal allows you to connect with our expert
               consultants for personalized guidance
             </p>
@@ -288,7 +288,7 @@ export default function PageEvent() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="text-center hover:shadow-lg transition-shadow duration-300">
-              <CardHeader>
+              <CardHeader className="px-3 md:px-6">
                 <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Phone className="h-8 w-8 text-amber-600" />
                 </div>
@@ -297,7 +297,7 @@ export default function PageEvent() {
                 </CardTitle>
                 <CardDescription>FREE</CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="px-3 md:px-6">
                 <p className="text-gray-600 mb-6">
                   Start with a complimentary consultation to explore how we can
                   help your business grow.
@@ -312,14 +312,14 @@ export default function PageEvent() {
             </Card>
 
             <Card className="text-center hover:shadow-lg transition-shadow duration-300">
-              <CardHeader>
+              <CardHeader className="px-3 md:px-6">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="h-8 w-8 text-green-600" />
                 </div>
                 <CardTitle className="text-xl">One-on-One Coaching</CardTitle>
                 <CardDescription>Personalized Sessions</CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="px-3 md:px-6">
                 <p className="text-gray-600 mb-6">
                   Schedule individual coaching sessions tailored to your
                   specific leadership and business challenges.
