@@ -9,8 +9,11 @@ export default function Footer() {
           <div className="md:col-span-2">
             <h3 className="text-xl md:text-3xl  mb-4">Oakss Consult Ltd</h3>
             <p className=" mb-4 font-thin">
-              Scaling Businesses, Building Leaders. Practical management,
-              training & consulting for entrepreneurs, teams & institutions.
+              We provide practical training, strategic management, and tailored
+              growth strategies to organisations, institutions, businesses,
+              teams, and professionals — helping them optimise performance,
+              align vision with execution, and achieve sustainable results
+              faster and smarter.
             </p>
             <div className="flex space-x-4">
               <a
@@ -40,14 +43,14 @@ export default function Footer() {
               <li>Business Growth Strategy</li>
               <li>Consulting & Coaching</li>
               <li>Staff Performance</li>
-              <li>Student Training</li>
+              <li>Training</li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-xl md:text-3xl mb-4">About</h4>
             <ul className="space-y-2 font-thin text-sm md:text-base ">
-              <li>what we Do</li>
+              <li>What we Do</li>
               <li>Our Services</li>
               <li>Testimonials</li>
             </ul>

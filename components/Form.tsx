@@ -190,7 +190,7 @@ export default function EventRegistrationForm({
                         <SelectValue placeholder="Choose an event" />
                       </SelectTrigger>
                     </FormControl>
-                    <SelectContent>
+                    {/* <SelectContent>
                       {events.map((event) => (
                         <SelectItem key={event.id} value={event.id}>
                           <div>
@@ -198,6 +198,20 @@ export default function EventRegistrationForm({
                               {event.title}
                             </div>
                             <div className="text-xs text-gray-500">
+                              {event.date}
+                            </div>
+                          </div>
+                        </SelectItem>
+                      ))}
+                    </SelectContent> */}
+                    <SelectContent>
+                      {events.map((event) => (
+                        <SelectItem key={event.id} value={event.id}>
+                          <div className="w-full max-w-[300px]">
+                            <div className="font-medium text-sm break-words">
+                              {event.title}
+                            </div>
+                            <div className="text-xs text-gray-500 break-words">
                               {event.date}
                             </div>
                           </div>

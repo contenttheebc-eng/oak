@@ -56,9 +56,20 @@ export default function PageEvent() {
           </h2>
 
           <div className="space-y-8">
-            {/* Featured Event */}
             {/* <Card className="border-l-4 border-l-amber-600 shadow-lg">
-              <CardHeader>
+              <CardHeader className="px-3 md:px-6">
+                <div className="h-52 md:h-64 mb-4 grid grid-cols-2">
+                  <img
+                    src="/cloudinary/workshop.jpg"
+                    alt="Managing Humans, Not Just Roles, to Deliver Goals"
+                    className="h-full object-cover rounded-md object-top"
+                  />
+                  <img
+                    src="/cloudinary/hat.jpg"
+                    alt="Managing Humans, Not Just Roles, to Deliver Goals"
+                    className="h-full object-cover rounded-md object-top"
+                  />
+                </div>
                 <div className="flex items-center justify-between mb-4">
                   <Badge className="bg-amber-100 text-amber-800">
                     Featured Event
@@ -70,18 +81,19 @@ export default function PageEvent() {
                     FREE
                   </Badge>
                 </div>
-                <CardTitle className="text-2xl text-amber-900">
+              </CardHeader>
+              <CardContent className="px-3 md:px-6">
+                <CardTitle className="text-lg md:text-2xl text-amber-900 mb-2">
                   Managing Humans, Not Just Roles, to Deliver Goals
                 </CardTitle>
-                <CardDescription className="text-lg">
+                <CardDescription className="text-sm md:text-lg mb-4">
                   <div className="flex items-center text-gray-600 mb-2">
                     <Calendar className="h-5 w-5 mr-2" />
                     Thursday, 16th October, 2025 - Online Workshop
                   </div>
                 </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-700 mb-6 leading-relaxed">
+
+                <p className="text-sm md:text-base text-gray-700 mb-6 leading-relaxed">
                   In today&apos;s business world, success is not about assigning
                   tasks, it is about empowering people. Many managers and
                   business owners fall into the trap of managing roles instead
@@ -89,7 +101,7 @@ export default function PageEvent() {
                   disengagement, and missed opportunities.
                 </p>
 
-                <div className="mb-6">
+                <div className="mb-6 text-sm md:text-base">
                   <h4 className="font-semibold text-gray-900 mb-3">
                     This interactive workshop will help you:
                   </h4>
@@ -126,9 +138,14 @@ export default function PageEvent() {
             </Card> */}
             <Card className="border-l-4 border-l-amber-600 shadow-lg">
               <CardHeader className="px-3 md:px-6">
-                <div className="h-52 md:h-64 mb-4">
+                <div className=" mb-4 grid grid-cols-2 gap-2">
                   <img
-                    src="/cloudinary/8.jpg"
+                    src="/cloudinary/workshop.jpg"
+                    alt="Managing Humans, Not Just Roles, to Deliver Goals"
+                    className="w-full h-full object-cover rounded-md object-top"
+                  />
+                  <img
+                    src="/cloudinary/hat.jpg"
                     alt="Managing Humans, Not Just Roles, to Deliver Goals"
                     className="w-full h-full object-cover rounded-md object-top"
                   />
@@ -206,7 +223,7 @@ export default function PageEvent() {
                 <CardHeader className="px-3 md:px-6">
                   <div className="h-52 md:h-64">
                     <img
-                      src="/cloudinary/17.jpg"
+                      src="/cloudinary/clarity.jpg"
                       alt="Business Growth Strategy"
                       className="w-full h-full object-cover rounded-md"
                     />

@@ -50,8 +50,8 @@ const OakssConsultWebsite = () => {
               <span className="text-amber-300">Building Teams</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8  leading-relaxed md:w-3/4">
-              Practical management, training & consulting for entrepreneurs,
-              teams & institutions
+              Practical Management, Training & Consultation for Organisations,
+              Institutions, Businesses, and Teams
             </p>
             <div className="flex  gap-4">
               <Link
@@ -68,48 +68,49 @@ const OakssConsultWebsite = () => {
 
       {/* Who We Are */}
       <section id="who-we-are" className="py-10 md:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
+        <div className="md:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-left md:text-center mb-8">
             <h2 className="text-3xl md:text-5xl  text-amber-900 mb-6">
               Who We Are
             </h2>
             <div className="max-w-4xl mx-auto">
-              <div className="text-sm md:text-xl text-gray-700 leading-relaxed mb-8">
+              <div className="text-sm md:text-xl text-gray-700 leading-relaxed mb-8 ">
                 <p>
                   Oakss Consult Ltd is a high-impact business growth and
                   management consultancy.
                 </p>
                 <p>
-                  We help companies (small, medium, We help companies (small,
-                  medium, large), team leaders, founders, undergraduate
-                  students, and professionals to scale, manage their people for
-                  results, and deliver sustainable performance.
+                  We provide practical training, strategic management, and
+                  tailored growth strategies to organisations, institutions,
+                  businesses, teams, and professionals — helping them optimise
+                  performance, align vision with execution, and achieve
+                  sustainable results faster and smarter.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-4 md:h-[420px] gap-x-2  ">
-            <div className="col-span-2">
+          <div className="grid grid-cols-4  gap-x-2  ">
+            <div className="col-span-2 h-80 md:h-[420px]">
               <img
                 src="/cloudinary/21.jpg"
                 alt="Who We Are"
                 className="object-cover h-full "
               />
             </div>
-            <div>
+            <div className="h-80 md:h-[420px]">
               <img
                 src="/cloudinary/15.jpg"
                 alt="Who We Are"
-                className="w-full h-full "
+                className="object-cover h-full "
               />
             </div>
 
-            <div>
+            <div className="h-80 md:h-[420px]">
               <img
                 src="/cloudinary/6.jpg"
                 alt="Who We Are"
-                className="w-full h-full "
+                className="object-cover h-full "
               />
             </div>
           </div>
@@ -124,9 +125,11 @@ const OakssConsultWebsite = () => {
                 </CardHeader>
                 <CardContent className="px-3 md:px-6">
                   <p className=" text-gray-700">
-                    To empower organisations and individuals with the skills,
-                    strategies, and mindset to grow with purpose, lead with
-                    clarity, and perform at scale.
+                    To empower organisations, institutions, businesses, teams,
+                    professionals and students through practical training,
+                    strategic management, and tailored growth strategies -
+                    optimising performance, aligning vision with execution, and
+                    driving sustainable results faster and smarter.
                   </p>
                 </CardContent>
               </Card>
@@ -171,101 +174,104 @@ const OakssConsultWebsite = () => {
               What We Do
             </h2>
             <p className="text-sm md:text-xl text-gray-600  mx-auto">
-              Our comprehensive suite of services designed to accelerate your
-              growth and leadership development
+              Our comprehensive suite of services is designed to accelerate
+              growth and development
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             <Card className="hover:shadow-lg transition-shadow duration-300 ">
               <CardHeader className="px-3 md:px-6">
-                <div className="h-32">
+                <div className="h-52 md:h-64">
                   <img
                     src="/cloudinary/22.jpg"
                     alt="Business Growth Strategy"
-                    className="w-full  object-cover rounded-md"
+                    className="w-full h-full  object-cover rounded-md"
                   />
                 </div>
               </CardHeader>
-              <CardHeader className="px-3 md:px-6">
-                <CardTitle className="text-lg pt-4">
+              <CardContent className="px-3 md:px-6">
+                <CardTitle className="text-lg md:pt-4">
                   Business Growth Strategy & Management
                 </CardTitle>
-              </CardHeader>
-              <CardContent className="px-3 md:px-6">
-                <p className="text-gray-600">
-                  Workshops, short courses, and bespoke training for team
-                  managers, leaders, behavioural leadership, and performance
-                  management.
-                </p>
+                <CardDescription className="">
+                  <p className="text-gray-600">
+                    Workshops, short courses, and bespoke training for team
+                    managers, leaders, behavioural leadership, and performance
+                    management.
+                  </p>
+                </CardDescription>
               </CardContent>
             </Card>
 
             <Card className="hover:shadow-lg transition-shadow duration-300">
               <CardHeader className="px-3 md:px-6">
-                <div className="h-32">
+                <div className="h-52 md:h-64">
                   <img
                     src="/cloudinary/23.jpg"
                     alt="Business Growth Strategy"
-                    className="w-full  object-cover rounded-md"
+                    className="w-full h-full object-cover rounded-md"
                   />
                 </div>
               </CardHeader>
-              <CardHeader>
-                <CardTitle className="text-lg pt-4">Consulting</CardTitle>
-              </CardHeader>
+
               <CardContent className="px-3 md:px-6">
-                <p className="text-gray-600">
-                  Personal coaching, strategy review, problem-solving sessions,
-                  and long-term consultancy engagements for founders, CEOs, and
-                  leaders.
-                </p>
+                <CardTitle className="text-lg md:pt-4">Consulting</CardTitle>
+                <CardDescription className="">
+                  <p className="text-gray-600">
+                    Personal coaching, strategy review, problem-solving
+                    sessions, and long-term consultancy engagements for
+                    founders, CEOs, and leaders.
+                  </p>
+                </CardDescription>
               </CardContent>
             </Card>
 
             <Card className="hover:shadow-lg transition-shadow duration-300">
               <CardHeader className="px-3 md:px-6">
-                <div className="h-32">
+                <div className="h-52 md:h-64">
                   <img
                     src="/cloudinary/8.jpg"
-                    alt="Business Growth Strategy"
-                    className="w-full  object-cover rounded-md"
+                    alt="Staff Performance Operations"
+                    className="w-full h-full object-cover rounded-md"
                   />
                 </div>
               </CardHeader>
-              <CardHeader className="px-3 md:px-6">
-                <CardTitle className="text-lg pt-4">
+
+              <CardContent className="px-3 md:px-6">
+                <CardTitle className="text-lg md:pt-4">
                   Staff Performance Operations
                 </CardTitle>
-              </CardHeader>
-              <CardContent className="px-3 md:px-6">
-                <p className="text-gray-600">
-                  Build effective structures, processes, KPI setting, and staff
-                  accountability systems for your business.
-                </p>
+                <CardDescription className="">
+                  <p className="text-gray-600">
+                    Build effective structures, processes, KPI setting, and
+                    staff accountability systems for your business.
+                  </p>
+                </CardDescription>
               </CardContent>
             </Card>
 
             <Card className="hover:shadow-lg transition-shadow duration-300">
               <CardHeader className="px-3 md:px-6">
-                <div className="h-32">
+                <div className="h-52 md:h-64">
                   <img
                     src="/cloudinary/11.jpg"
-                    alt="Business Growth Strategy"
-                    className="w-full  object-cover rounded-md"
+                    alt="Training for Students & Emerging Professionals"
+                    className="w-full h-full object-cover rounded-md"
                   />
                 </div>
               </CardHeader>
-              <CardHeader className="px-3 md:px-6">
-                <CardTitle className="text-lg pt-4">
+
+              <CardContent className="px-3 md:px-6">
+                <CardTitle className="text-lg md:pt-4">
                   Training for Students & Emerging Professionals
                 </CardTitle>
-              </CardHeader>
-              <CardContent className="px-3 md:px-6">
-                <p className="text-gray-600">
-                  Undergraduate workshops, soft skills, early leadership, career
-                  preparation, and business fundamentals.
-                </p>
+                <CardDescription className="">
+                  <p className="text-gray-600">
+                    Undergraduate workshops, soft skills, early leadership,
+                    career preparation, and business fundamentals.
+                  </p>
+                </CardDescription>
               </CardContent>
             </Card>
           </div>
