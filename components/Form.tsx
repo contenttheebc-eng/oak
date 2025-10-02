@@ -28,6 +28,7 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { toast } from "sonner";
 
 // Form schema for event registration
 const formSchema = z.object({
@@ -91,23 +92,64 @@ export default function EventRegistrationForm({
     }
   }, [selectedEventId, form]);
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log("Registration submitted:", values);
+  // async function onSubmit(values: z.infer<typeof formSchema>) {
+  //   try {
+  //     const res = await fetch("/api/events", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(values),
+  //     });
 
-    // Get the event title for confirmation
-    const selectedEvent = events.find((e) => e.id === values.event);
-    const eventTitle = selectedEvent
-      ? selectedEvent.title
-      : "the selected event";
+  //     if (!res.ok) {
+  //       const error = await res.json();
+  //       toast.error(`Error: ${error.error}`);
+  //       return;
+  //     }
 
-    // Here you would typically send the data to your backend
-    alert(
-      `Thank you ${values.name}! You have successfully registered for: ${eventTitle}. We'll send you more details at ${values.email}.`
-    );
+  //     const data = await res.json();
+  //     toast.success(
+  //       `Thank you ${data.attendee.fullName}! You have successfully registered.`
+  //     );
 
-    // Close modal and reset form
-    onClose();
-    form.reset();
+  //     // Close modal and reset form
+  //     onClose();
+  //     form.reset();
+  //   } catch (err) {
+  //     console.error(err);
+  //     toast.error("Something went wrong. Please try again later.");
+  //   }
+  // }
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const res = await fetch("/api/events", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        // Handle specific error for duplicate email
+        if (res.status === 409) {
+          toast.error(data.error || "This email is already registered.");
+        } else {
+          toast.error(data.error || "Registration failed. Please try again.");
+        }
+        return;
+      }
+
+      toast.success(
+        `Thank you ${data.attendee.fullName}! You have successfully registered.`
+      );
+
+      // Close modal and reset form
+      onClose();
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      toast.error("Something went wrong. Please try again later.");
+    }
   }
 
   const handleClose = () => {
@@ -190,20 +232,7 @@ export default function EventRegistrationForm({
                         <SelectValue placeholder="Choose an event" />
                       </SelectTrigger>
                     </FormControl>
-                    {/* <SelectContent>
-                      {events.map((event) => (
-                        <SelectItem key={event.id} value={event.id}>
-                          <div>
-                            <div className="font-medium text-sm">
-                              {event.title}
-                            </div>
-                            <div className="text-xs text-gray-500">
-                              {event.date}
-                            </div>
-                          </div>
-                        </SelectItem>
-                      ))}
-                    </SelectContent> */}
+
                     <SelectContent>
                       {events.map((event) => (
                         <SelectItem key={event.id} value={event.id}>

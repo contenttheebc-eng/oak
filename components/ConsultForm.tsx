@@ -38,6 +38,7 @@ import { format } from "date-fns";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { toast } from "sonner";
 
 // Form schema with conditional validation
 const baseSchema = {
@@ -135,38 +136,91 @@ export default function ConsultationForm({
     }
   }, [selectedServiceType, form]);
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log("Consultation booking submitted:", values);
+  // function onSubmit(values: z.infer<typeof formSchema>) {
+  //   console.log("Consultation booking submitted:", values);
 
-    // Get the service title for confirmation
-    const selectedService = serviceTypes.find(
-      (s) => s.id === values.serviceType
-    );
-    const serviceTitle = selectedService
-      ? selectedService.title
-      : "the selected service";
+  //   // Get the service title for confirmation
+  //   const selectedService = serviceTypes.find(
+  //     (s) => s.id === values.serviceType
+  //   );
+  //   const serviceTitle = selectedService
+  //     ? selectedService.title
+  //     : "the selected service";
 
-    let confirmationMessage = `Thank you ${values.name}! Your request for ${serviceTitle} has been submitted.`;
+  //   let confirmationMessage = `Thank you ${values.name}! Your request for ${serviceTitle} has been submitted.`;
 
-    if (values.preferredDate) {
-      confirmationMessage += ` We'll contact you at ${
-        values.email
-      } to confirm your appointment for ${format(
-        values.preferredDate,
-        "PPP"
-      )}.`;
-    } else if (values.customRequirements) {
-      confirmationMessage += ` We'll review your requirements and send you a custom quote at ${values.email} within 24-48 hours.`;
-    } else {
-      confirmationMessage += ` We'll contact you at ${values.email} with next steps.`;
+  //   if (values.preferredDate) {
+  //     confirmationMessage += ` We'll contact you at ${
+  //       values.email
+  //     } to confirm your appointment for ${format(
+  //       values.preferredDate,
+  //       "PPP"
+  //     )}.`;
+  //   } else if (values.customRequirements) {
+  //     confirmationMessage += ` We'll review your requirements and send you a custom quote at ${values.email} within 24-48 hours.`;
+  //   } else {
+  //     confirmationMessage += ` We'll contact you at ${values.email} with next steps.`;
+  //   }
+
+  //   // Here you would typically send the data to your backend
+  //   alert(confirmationMessage);
+
+  //   // Close modal and reset form
+  //   onClose();
+  //   form.reset();
+  // }
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const res = await fetch("/api/consultation", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        // Handle specific error for duplicate booking
+        if (res.status === 409) {
+          toast.error(data.error || "You have already booked this service.");
+        } else {
+          toast.error(data.error || "Booking failed. Please try again.");
+        }
+        return;
+      }
+
+      // Get the service title for confirmation
+      const selectedService = serviceTypes.find(
+        (s) => s.id === values.serviceType
+      );
+      const serviceTitle = selectedService
+        ? selectedService.title
+        : "the selected service";
+
+      let confirmationMessage = `Thank you ${values.name}! Your request for ${serviceTitle} has been submitted.`;
+
+      if (values.preferredDate) {
+        confirmationMessage += ` We'll contact you at ${
+          values.email
+        } to confirm your appointment for ${format(
+          values.preferredDate,
+          "PPP"
+        )}.`;
+      } else if (values.customRequirements) {
+        confirmationMessage += ` We'll review your requirements and send you a custom quote at ${values.email} within 24-48 hours.`;
+      } else {
+        confirmationMessage += ` We'll contact you at ${values.email} with next steps.`;
+      }
+
+      toast.success(confirmationMessage);
+
+      // Close modal and reset form
+      onClose();
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      toast.error("Something went wrong. Please try again later.");
     }
-
-    // Here you would typically send the data to your backend
-    alert(confirmationMessage);
-
-    // Close modal and reset form
-    onClose();
-    form.reset();
   }
 
   const handleClose = () => {
@@ -356,10 +410,10 @@ export default function ConsultationForm({
                 {form.formState.isSubmitting
                   ? "Submitting..."
                   : watchedServiceType === "custom-package"
-                  ? "Request Quote"
-                  : watchedServiceType === "discovery-call"
-                  ? "Book Free Call"
-                  : "Schedule Session"}
+                    ? "Request Quote"
+                    : watchedServiceType === "discovery-call"
+                      ? "Book Free Call"
+                      : "Schedule Session"}
               </Button>
               <Button
                 type="button"
