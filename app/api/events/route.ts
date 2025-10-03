@@ -158,38 +158,38 @@ export async function POST(req: Request) {
 
     await attendee.save();
 
-    // try {
-    //   const response = await fetch(
-    //     "https://api.emailjs.com/api/v1.0/email/send",
-    //     {
-    //       method: "POST",
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //         // Authorization: `Bearer ${process.env.EMAILJS_PRIVATE_KEY}`, // 🔑 add this
-    //       },
-    //       body: JSON.stringify({
-    //         service_id: process.env.EMAILJS_SERVICE_ID,
-    //         template_id: process.env.EMAILJS_TEMPLATE_ID,
-    //         user_id: process.env.EMAILJS_PUBLIC_KEY, // public key is fine here
-    //         template_params: {
-    //           fullName: name,
-    //           email,
-    //           phone,
-    //           event,
-    //           location,
-    //           status,
-    //         },
-    //       }),
-    //     }
-    //   );
+    try {
+      const response = await fetch(
+        "https://api.emailjs.com/api/v1.0/email/send",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            // Authorization: `Bearer ${process.env.EMAILJS_PRIVATE_KEY}`, // 🔑 add this
+          },
+          body: JSON.stringify({
+            service_id: process.env.EMAILJS_SERVICE_ID,
+            template_id: process.env.EMAILJS_TEMPLATE_ID,
+            user_id: process.env.EMAILJS_PUBLIC_KEY, // public key is fine here
+            template_params: {
+              fullName: name,
+              email,
+              phone,
+              event,
+              location,
+              status,
+            },
+          }),
+        }
+      );
 
-    //   if (!response.ok) {
-    //     const errorText = await response.text();
-    //     console.error("EmailJS failed:", errorText);
-    //   }
-    // } catch (err) {
-    //   console.error("EmailJS error:", err);
-    // }
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error("EmailJS failed:", errorText);
+      }
+    } catch (err) {
+      console.error("EmailJS error:", err);
+    }
 
     return NextResponse.json(
       { message: "Registration successful & email sent", attendee },

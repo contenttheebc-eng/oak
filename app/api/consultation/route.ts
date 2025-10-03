@@ -54,38 +54,41 @@ export async function POST(req: Request) {
 
     await consultation.save();
 
-    // TODO: Add email notification here (EmailJS or Resend)
-    // try {
-    //   const response = await fetch(
-    //     "https://api.emailjs.com/api/v1.0/email/send",
-    //     {
-    //       method: "POST",
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //       },
-    //       body: JSON.stringify({
-    //         service_id: process.env.EMAILJS_SERVICE_ID,
-    //         template_id: process.env.EMAILJS_CONSULTATION_TEMPLATE_ID,
-    //         user_id: process.env.EMAILJS_PUBLIC_KEY,
-    //         template_params: {
-    //           fullName: name,
-    //           email,
-    //           phone,
-    //           serviceType,
-    //           preferredDate: preferredDate ? new Date(preferredDate).toLocaleDateString() : 'N/A',
-    //           customRequirements: customRequirements || 'N/A',
-    //         },
-    //       }),
-    //     }
-    //   );
-    //
-    //   if (!response.ok) {
-    //     const errorText = await response.text();
-    //     console.error("EmailJS failed:", errorText);
-    //   }
-    // } catch (err) {
-    //   console.error("EmailJS error:", err);
-    // }
+    try {
+      const response = await fetch(
+        "https://api.emailjs.com/api/v1.0/email/send",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            service_id: process.env.EMAILJS_SERVICE_ID,
+            template_id: process.env.EMAILJS_CONSULTATION_TEMPLATE_ID,
+            user_id: process.env.EMAILJS_PUBLIC_KEY,
+            template_params: {
+              fullName: name,
+              email,
+              phone,
+              location,
+              status,
+              serviceType,
+              preferredDate: preferredDate
+                ? new Date(preferredDate).toLocaleDateString()
+                : "N/A",
+              customRequirements: customRequirements || "N/A",
+            },
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error("EmailJS failed:", errorText);
+      }
+    } catch (err) {
+      console.error("EmailJS error:", err);
+    }
 
     return NextResponse.json(
       { message: "Consultation booking successful", consultation },
