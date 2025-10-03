@@ -5,6 +5,8 @@ export interface IConsultation extends Document {
   fullName: string;
   email: string;
   phone: string;
+  location: string;
+  status: string;
   serviceType: string;
   preferredDate?: Date;
   customRequirements?: string;
@@ -16,6 +18,8 @@ const consultationSchema: Schema<IConsultation> = new Schema(
     fullName: { type: String, required: true, trim: true },
     email: { type: String, required: true, lowercase: true },
     phone: { type: String, required: true },
+    location: { type: String, required: true },
+    status: { type: String, required: true },
     serviceType: { type: String, required: true },
     preferredDate: { type: Date },
     customRequirements: { type: String },

@@ -21,6 +21,15 @@
 
 //     await mongooseConnect();
 
+//     // Check if user already registered for THIS specific event
+//     const existingAttendee = await Attendee.findOne({ email, event });
+//     if (existingAttendee) {
+//       return NextResponse.json(
+//         { error: "You have already registered for this event." },
+//         { status: 409 } // 409 Conflict status code
+//       );
+//     }
+
 //     const attendee = new Attendee({
 //       fullName: name,
 //       email,
@@ -29,6 +38,7 @@
 //     });
 
 //     await attendee.save();
+
 //     // try {
 //     //   const response = await fetch(
 //     //     "https://api.emailjs.com/api/v1.0/email/send",
@@ -66,8 +76,22 @@
 //     );
 //   } catch (error) {
 //     console.error("Error saving attendee:", error);
+
+//     // Type guard for MongoDB duplicate key error
+//     const isMongoError = (err: unknown): err is { code: number } => {
+//       return typeof err === "object" && err !== null && "code" in err;
+//     };
+
+//     // Handle MongoDB duplicate key error (E11000)
+//     if (isMongoError(error) && error.code === 11000) {
+//       return NextResponse.json(
+//         { error: "You have already registered for this event." },
+//         { status: 409 }
+//       );
+//     }
+
 //     return NextResponse.json(
-//       { error: "Failed to register attendee" },
+//       { error: "Failed to register attendee. Please try again." },
 //       { status: 500 }
 //     );
 //   }
@@ -96,15 +120,16 @@ import Attendee from "@/models/Event"; // adjust path if needed
 import { Resend } from "resend";
 import { EmailTemplate } from "@/components/email-template";
 import emailjs from "@emailjs/browser";
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Handle POST (register attendee)
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { name, email, phone, event } = body;
+    const { name, email, phone, event, location, status } = body;
 
-    if (!name || !email || !phone || !event) {
+    if (!name || !email || !phone || !event || !location || !status) {
       return NextResponse.json(
         { error: "All fields are required." },
         { status: 400 }
@@ -127,6 +152,8 @@ export async function POST(req: Request) {
       email,
       phone,
       event,
+      location,
+      status,
     });
 
     await attendee.save();
@@ -149,6 +176,8 @@ export async function POST(req: Request) {
     //           email,
     //           phone,
     //           event,
+    //           location,
+    //           status,
     //         },
     //       }),
     //     }

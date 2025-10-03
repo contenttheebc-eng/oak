@@ -10,12 +10,14 @@ export async function POST(req: Request) {
       name,
       email,
       phone,
+      location,
+      status,
       serviceType,
       preferredDate,
       customRequirements,
     } = body;
 
-    if (!name || !email || !phone || !serviceType) {
+    if (!name || !email || !phone || !location || !status || !serviceType) {
       return NextResponse.json(
         { error: "All required fields must be filled." },
         { status: 400 }
@@ -43,6 +45,8 @@ export async function POST(req: Request) {
       fullName: name,
       email,
       phone,
+      location,
+      status,
       serviceType,
       preferredDate: preferredDate ? new Date(preferredDate) : undefined,
       customRequirements,

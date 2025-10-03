@@ -31,20 +31,41 @@ import { z } from "zod";
 import { toast } from "sonner";
 
 // Form schema for event registration
-const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
-  }),
-  email: z.string().email({
-    message: "Please enter a valid email address.",
-  }),
-  phone: z.string().min(10, {
-    message: "Phone number must be at least 10 characters.",
-  }),
-  event: z.string().min(1, {
-    message: "Please select an event.",
-  }),
-});
+const formSchema = z
+  .object({
+    name: z.string().min(2, {
+      message: "Name must be at least 2 characters.",
+    }),
+    email: z.string().email({
+      message: "Please enter a valid email address.",
+    }),
+    phone: z.string().min(10, {
+      message: "Phone number must be at least 10 characters.",
+    }),
+    location: z.string().min(2, {
+      message: "Location must be at least 2 characters.",
+    }),
+    status: z.string().min(1, {
+      message: "Please select your status.",
+    }),
+    otherStatus: z.string().optional(),
+    event: z.string().min(1, {
+      message: "Please select an event.",
+    }),
+  })
+  .refine(
+    (data) => {
+      // If status is "other", otherStatus must be provided
+      if (data.status === "other") {
+        return data.otherStatus && data.otherStatus.trim().length > 0;
+      }
+      return true;
+    },
+    {
+      message: "Please specify your status.",
+      path: ["otherStatus"],
+    }
+  );
 
 const events = [
   {
@@ -64,6 +85,14 @@ const events = [
   },
 ];
 
+const statusOptions = [
+  { value: "investor", label: "Investor" },
+  { value: "business-owner", label: "Business Owner(s)" },
+  { value: "student", label: "Student" },
+  { value: "professional", label: "Professional" },
+  { value: "other", label: "Other" },
+];
+
 interface EventRegistrationFormProps {
   isOpen: boolean;
   onClose: () => void;
@@ -81,9 +110,14 @@ export default function EventRegistrationForm({
       name: "",
       email: "",
       phone: "",
+      location: "",
+      status: "",
+      otherStatus: "",
       event: selectedEventId,
     },
   });
+
+  const selectedStatus = form.watch("status");
 
   // Reset form when selectedEventId changes
   React.useEffect(() => {
@@ -92,39 +126,25 @@ export default function EventRegistrationForm({
     }
   }, [selectedEventId, form]);
 
-  // async function onSubmit(values: z.infer<typeof formSchema>) {
-  //   try {
-  //     const res = await fetch("/api/events", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify(values),
-  //     });
-
-  //     if (!res.ok) {
-  //       const error = await res.json();
-  //       toast.error(`Error: ${error.error}`);
-  //       return;
-  //     }
-
-  //     const data = await res.json();
-  //     toast.success(
-  //       `Thank you ${data.attendee.fullName}! You have successfully registered.`
-  //     );
-
-  //     // Close modal and reset form
-  //     onClose();
-  //     form.reset();
-  //   } catch (err) {
-  //     console.error(err);
-  //     toast.error("Something went wrong. Please try again later.");
-  //   }
-  // }
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
+      // Prepare the final status value
+      const finalStatus =
+        values.status === "other" ? values.otherStatus : values.status;
+
+      const payload = {
+        name: values.name,
+        email: values.email,
+        phone: values.phone,
+        location: values.location,
+        status: finalStatus,
+        event: values.event,
+      };
+
       const res = await fetch("/api/events", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
+        body: JSON.stringify(payload),
       });
 
       const data = await res.json();
@@ -159,8 +179,7 @@ export default function EventRegistrationForm({
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      {/* sm:max-w-[425px] */}
-      <DialogContent className="md:max-w-[425px] ">
+      <DialogContent className="md:max-w-[425px] max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>Event Registration</DialogTitle>
           <DialogDescription>
@@ -169,7 +188,7 @@ export default function EventRegistrationForm({
         </DialogHeader>
 
         <Form {...form}>
-          <div className="space-y-4 ">
+          <div className="space-y-4">
             <FormField
               control={form.control}
               name="name"
@@ -219,6 +238,61 @@ export default function EventRegistrationForm({
                 </FormItem>
               )}
             />
+
+            <FormField
+              control={form.control}
+              name="location"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Location *</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Enter your location" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="status"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Status *</FormLabel>
+                  <Select onValueChange={field.onChange} value={field.value}>
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select your status" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      {statusOptions.map((option) => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            {selectedStatus === "other" && (
+              <FormField
+                control={form.control}
+                name="otherStatus"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Please Specify *</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Enter your status" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            )}
 
             <FormField
               control={form.control}
