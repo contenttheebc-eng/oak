@@ -36,13 +36,13 @@ export default function Header() {
             <NavigationMenuList className="space-x-6 xl:space-x-10">
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className="font-medium">
-                  <Link href="#who-we-are">Who we are</Link>
+                  <Link href="/#who-we-are">Who we are</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className="font-medium">
-                  <Link href="#services">Our Services</Link>
+                  <Link href="/#services">Our Services</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
@@ -54,13 +54,19 @@ export default function Header() {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className="font-medium">
-                  <Link href="#testimonials">Testimonials</Link>
+                  <Link href="/consultations">Consultations</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className="font-medium">
-                  <Link href="#work-with-us">Why work with us</Link>
+                  <Link href="/#testimonials">Testimonials</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild className="font-medium">
+                  <Link href="/#work-with-us">Why work with us</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -90,7 +96,7 @@ export default function Header() {
       <div className={`lg:hidden ${isOpen ? "block" : "hidden"}`}>
         <div className="px-4 pt-2 pb-3 space-y-3 bg-white shadow-lg border-t">
           <Link
-            href="#who-we-are"
+            href="/#who-we-are"
             className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 rounded-md"
             onClick={() => setIsOpen(false)}
           >
@@ -98,7 +104,7 @@ export default function Header() {
           </Link>
 
           <Link
-            href="#services"
+            href="/#services"
             className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 rounded-md"
             onClick={() => setIsOpen(false)}
           >
@@ -112,9 +118,16 @@ export default function Header() {
           >
             Events
           </Link>
+          <Link
+            href="/consultations"
+            className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 rounded-md"
+            onClick={() => setIsOpen(false)}
+          >
+            Consultations
+          </Link>
 
           <Link
-            href="#testimonials"
+            href="/#testimonials"
             className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 rounded-md"
             onClick={() => setIsOpen(false)}
           >
@@ -122,7 +135,7 @@ export default function Header() {
           </Link>
 
           <Link
-            href="#work-with-us"
+            href="/#work-with-us"
             className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 rounded-md"
             onClick={() => setIsOpen(false)}
           >

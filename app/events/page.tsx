@@ -405,12 +405,9 @@ export default function PageEvent() {
     <>
       <section className="bg-gradient-to-r from-amber-900 to-amber-700 text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">
-            Events & Consultation
-          </h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">Events</h1>
           <p className="md:text-xl text-amber-100">
-            Stay connected with our workshops and book your consultation
-            sessions
+            Stay updated with our latest events and be part of the experience.
           </p>
         </div>
       </section>
@@ -629,7 +626,7 @@ export default function PageEvent() {
         </div>
       </section>
 
-      <section className="py-10 md:py-20 bg-gray-50">
+      {/* <section className="py-10 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-6">
@@ -724,18 +721,18 @@ export default function PageEvent() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <EventRegistrationForm
         isOpen={isFormOpen}
         onClose={() => setIsFormOpen(false)}
         selectedEventId={selectedEventId}
       />
-      <ConsultationForm
+      {/* <ConsultationForm
         isOpen={isConsultationFormOpen}
         onClose={() => setIsConsultationFormOpen(false)}
         selectedServiceType={selectedServiceType}
-      />
+      /> */}
     </>
   );
 }
