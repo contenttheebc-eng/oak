@@ -1,86 +1,3 @@
-// import { ChevronRight } from "lucide-react";
-// import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
-// import {
-//   Carousel,
-//   CarouselContent,
-//   CarouselItem,
-//   CarouselNext,
-//   CarouselPrevious,
-
-// } from "@/components/ui/carousel";
-
-// const features = [
-//   {
-//     title: "Experienced Team",
-//     description:
-//       "Led by consultants who have worked across industries, with diverse business environments.",
-//     image: "/cloudinary/1.jpg", // Replace with actual image URL
-//   },
-//   {
-//     title: "Flexible Offerings",
-//     description:
-//       "In-person and online workshops; one-off training & ongoing coaching.",
-//     image: "/cloudinary/2.jpg", // Replace with actual image URL
-//   },
-//   {
-//     title: "Client-Centred Approach",
-//     description:
-//       "We tailor programs to your needs; focus on measurable outcomes.",
-//     image: "/cloudinary/3.jpg", // Replace with actual image URL
-//   },
-//   {
-//     title: "Proven Results",
-//     description:
-//       "We have supported clients to increase team productivity, reduce turnover, scale operations.",
-//     image: "/cloudinary/4.jpg", // Replace with actual image URL
-//   },
-//   {
-//     title: "Practical & Actionable",
-//     description:
-//       "Our trainings are hands-on, real-world tools, not just theory.",
-//     image: "/cloudinary/10.jpg", // Replace with actual image URL
-//   },
-// ];
-
-// export default function WorkCarousel() {
-//   return (
-//     <section className="py-20">
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//         <div className="text-center mb-16">
-//           <h2 className="text-5xl text-amber-900 mb-6">Why Work With Us</h2>
-//         </div>
-//         <Carousel opts={{ align: "start", loop: true }}>
-//           <CarouselContent className="gap-x-4">
-//             {features.map((feature, index) => (
-//               <CarouselItem key={index} className=" h-[450px] w-full">
-//                 <div className="p-3  grid grid-cols-[1.8fr_1.2fr] gap-6">
-//                   <div>
-//                     <img
-//                       src={feature.image}
-//                       alt={feature.title}
-//                       className="object-cover w-full h-96 object-top rounded-md"
-//                     />
-//                   </div>
-//                   <div className="flex flex-col justify-center space-y-4">
-//                     <div className="text-amber-900 text-3xl">
-//                       {feature.title}
-//                     </div>
-//                     <div className=" font-light text-xl">
-//                       {feature.description}
-//                     </div>
-//                   </div>
-//                 </div>
-//               </CarouselItem>
-//             ))}
-//           </CarouselContent>
-//           {/* <CarouselPrevious />
-//           <CarouselNext /> */}
-//         </Carousel>
-//       </div>
-//     </section>
-//   );
-// }
-
 import React, { useCallback, useEffect, useState } from "react";
 import {
   Carousel,
@@ -101,7 +18,7 @@ const features: Feature[] = [
     title: "Experienced Team",
     description:
       "Led by consultants who have worked across industries, with diverse business environments.",
-    image: "/cloudinary/22.jpg",
+    image: "/cloudinary/1.jpg",
   },
   {
     title: "Flexible Offerings",

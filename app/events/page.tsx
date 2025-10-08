@@ -370,7 +370,7 @@ export default function PageEvent() {
       date: "June 13, 2025",
       image: "/cloudinary/24.jpg",
       description: "What every business & individual must know",
-      attendees: 45,
+      attendees: "500+",
     },
     {
       id: 2,
@@ -379,7 +379,7 @@ export default function PageEvent() {
       image: "/cloudinary/25.jpg",
       description:
         "Exploring digital tools and strategies to transform traditional business operations.",
-      attendees: 60,
+      attendees: 355,
     },
     {
       id: 3,
@@ -388,7 +388,7 @@ export default function PageEvent() {
       image: "/cloudinary/26.jpg",
       description:
         "Practical strategies for recruiting, developing, and retaining top talent.",
-      attendees: 38,
+      attendees: 355,
     },
     {
       id: 4,
@@ -397,7 +397,7 @@ export default function PageEvent() {
       image: "/cloudinary/27.jpg",
       description:
         "Learn to create and implement effective strategic plans for sustainable growth.",
-      attendees: 52,
+      attendees: 355,
     },
   ];
 
@@ -519,7 +519,7 @@ export default function PageEvent() {
                   <CardDescription className="mb-4 text-sm md:text-base">
                     <div className="flex items-center text-gray-600">
                       <Calendar className="h-4 w-4 mr-2" />
-                      12 November 2025 - Online Webinar
+                      13 November 2025 - Online Webinar
                     </div>
                   </CardDescription>
                   <p className="text-gray-700 mb-4 text-sm md:text-base">
@@ -553,7 +553,7 @@ export default function PageEvent() {
                   <CardDescription className="mb-4 text-sm md:text-base">
                     <div className="flex items-center text-gray-600">
                       <Calendar className="h-4 w-4 mr-2" />
-                      15 December 2025 - Virtual
+                      26 January 2026 - Virtual
                     </div>
                   </CardDescription>
                   <p className="text-gray-700 mb-4 text-sm md:text-base">
