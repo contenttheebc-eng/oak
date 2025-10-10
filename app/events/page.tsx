@@ -375,7 +375,7 @@ export default function PageEvent() {
     {
       id: 2,
       title: "Business & Beyond",
-      date: "March 29, 2025",
+      date: "May 29, 2025",
       image: "/cloudinary/25.jpg",
       description:
         "Exploring digital tools and strategies to transform traditional business operations.",
@@ -384,7 +384,7 @@ export default function PageEvent() {
     {
       id: 3,
       title: "Business & Beyond",
-      date: "March 29, 2025",
+      date: "May 29, 2025",
       image: "/cloudinary/26.jpg",
       description:
         "Practical strategies for recruiting, developing, and retaining top talent.",
@@ -393,11 +393,129 @@ export default function PageEvent() {
     {
       id: 4,
       title: "Business & Beyond",
-      date: "March 29, 2025",
+      date: "May 29, 2025",
       image: "/cloudinary/27.jpg",
       description:
         "Learn to create and implement effective strategic plans for sustainable growth.",
       attendees: 355,
+    },
+  ];
+
+  const galleryImages = [
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310407/10_s4yndf.jpg",
+      alt: "Event moment 1",
+      caption: "Avoid Tax Traps Workshop",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310407/13_dullte.jpg",
+      alt: "Event moment 2",
+      caption: "Business & Beyond Summit",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310407/1_xipbor.jpg",
+      alt: "Event moment 3",
+      caption: "Networking Session",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310407/12_nipeel.jpg",
+      alt: "Event moment 4",
+      caption: "Interactive Workshop",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310407/11_cqrzaa.jpg",
+      alt: "Event moment 5",
+      caption: "Leadership Training",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310407/14_diuhzb.jpg",
+      alt: "Event moment 6",
+      caption: "Panel Discussion",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310408/16_ltkcbj.jpg",
+      alt: "Event moment 7",
+      caption: "Strategic Planning Session",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310409/17_vqxgno.jpg",
+      alt: "Event moment 8",
+      caption: "Student Bootcamp",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310409/15_iapk0q.jpg",
+      alt: "Event moment 9",
+      caption: "Team Building",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310409/19_tphze5.jpg",
+      alt: "Event moment 10",
+      caption: "Professional Development",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310409/18_xvaneu.jpg",
+      alt: "Event moment 1",
+      caption: "Avoid Tax Traps Workshop",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310409/2_eohv52.jpg",
+      alt: "Event moment 2",
+      caption: "Business & Beyond Summit",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310409/20_tvmpcn.jpg",
+      alt: "Event moment 3",
+      caption: "Networking Session",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310410/21_w53ztt.jpg",
+      alt: "Event moment 4",
+      caption: "Interactive Workshop",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310410/23_yxmcpb.jpg",
+      alt: "Event moment 5",
+      caption: "Leadership Training",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310412/22_uxew4v.jpg",
+      alt: "Event moment 6",
+      caption: "Panel Discussion",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310419/3_jnkhpo.jpg",
+      alt: "Event moment 7",
+      caption: "Strategic Planning Session",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310419/4_nsxj8t.jpg",
+      alt: "Event moment 8",
+      caption: "Student Bootcamp",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310420/5_plpjah.jpg",
+      alt: "Event moment 9",
+      caption: "Team Building",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310420/9_fwpqtf.jpg",
+      alt: "Event moment 10",
+      caption: "Professional Development",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310420/6_nkvber.jpg",
+      alt: "Event moment 8",
+      caption: "Student Bootcamp",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310421/8_fzpjsv.jpg",
+      alt: "Event moment 9",
+      caption: "Team Building",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310421/7_vmihjc.jpg",
+      alt: "Event moment 10",
+      caption: "Professional Development",
     },
   ];
 
@@ -626,102 +744,44 @@ export default function PageEvent() {
         </div>
       </section>
 
-      {/* <section className="py-10 md:py-20 bg-gray-50">
+      {/* Gallery Section */}
+      <section className="py-10 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-6">
-              Consultation & Coaching
+          <div className="text-center mb-12">
+            <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-4">
+              London Events Gallery
             </h2>
-            <p className="md:text-xl text-gray-600 max-w-3xl mx-auto">
-              Our consultation portal allows you to connect with our expert
-              consultants for personalized guidance
+            <p className="text-gray-600 md:text-lg">
+              Highlights and memorable moments from our events
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center hover:shadow-lg transition-shadow duration-300">
-              <CardHeader className="px-3 md:px-6">
-                <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Phone className="h-8 w-8 text-amber-600" />
-                </div>
-                <CardTitle className="text-xl">
-                  30-Minute Discovery Call
-                </CardTitle>
-                <CardDescription>FREE</CardDescription>
-              </CardHeader>
-              <CardContent className="px-3 md:px-6">
-                <p className="text-gray-600 mb-6">
-                  Start with a complimentary consultation to explore how we can
-                  help your business grow.
-                </p>
-                <Button
-                  className="w-full bg-amber-600 hover:bg-amber-700"
-                  onClick={() => handleConsultationClick("discovery-call")}
-                >
-                  Book Discovery Call
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow duration-300">
-              <CardHeader className="px-3 md:px-6">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="h-8 w-8 text-green-600" />
-                </div>
-                <CardTitle className="text-xl">One-on-One Coaching</CardTitle>
-                <CardDescription>Personalized Sessions</CardDescription>
-              </CardHeader>
-              <CardContent className="px-3 md:px-6">
-                <p className="text-gray-600 mb-6">
-                  Schedule individual coaching sessions tailored to your
-                  specific leadership and business challenges.
-                </p>
-                <Button
-                  variant="outline"
-                  className="w-full"
-                  onClick={() => handleConsultationClick("coaching")}
-                >
-                  Schedule Session
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow duration-300">
-              <CardHeader>
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="h-8 w-8 text-purple-600" />
-                </div>
-                <CardTitle className="text-xl">Custom Packages</CardTitle>
-                <CardDescription>Team & Company Solutions</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-6">
-                  Comprehensive packages designed for your team or
-                  company&apos;s specific needs and objectives.
-                </p>
-                <Button
-                  variant="outline"
-                  className="w-full"
-                  onClick={() => handleConsultationClick("custom-package")}
-                >
-                  Get Custom Quote
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="text-center mt-12">
-            <Button
-              size="lg"
-              className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4"
-              onClick={() => handleConsultationClick("")}
-            >
-              Access Consultation Portal
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+          {/* Masonry Grid */}
+          <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
+            {galleryImages.map((image, index) => (
+              <div
+                key={index}
+                className="break-inside-avoid group relative overflow-hidden rounded-lg cursor-pointer"
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                {image.caption && (
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                      <p className="text-white text-sm font-medium">
+                        {image.caption}
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       <EventRegistrationForm
         isOpen={isFormOpen}

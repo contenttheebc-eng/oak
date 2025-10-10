@@ -8,13 +8,6 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <h3 className="text-xl md:text-3xl  mb-4">Oakss Consult Ltd</h3>
-            <p className=" mb-4 font-thin">
-              We provide practical training, strategic management, and tailored
-              growth strategies to organisations, institutions, businesses,
-              teams, and professionals — helping them optimise performance,
-              align vision with execution, and achieve sustainable results
-              faster and smarter.
-            </p>
             <div className="flex space-x-4">
               <a
                 href="https://www.instagram.com/oakssconsult?igsh=MTgyeGpubjVldDZ0bw=="
@@ -35,6 +28,13 @@ export default function Footer() {
                 <Facebook className="h-5 w-5" />
               </a>
             </div>
+            <p className=" mb-4 font-thin">
+              We provide practical training, strategic management, and tailored
+              growth strategies to organisations, institutions, businesses,
+              teams, and professionals — helping them optimise performance,
+              align vision with execution, and achieve sustainable results
+              faster and smarter.
+            </p>
           </div>
 
           <div>
