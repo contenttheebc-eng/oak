@@ -403,10 +403,16 @@ export default function PageEvent() {
 
   const galleryImages = [
     {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310409/2_eohv52.jpg",
+      alt: "Event moment 2",
+      caption: "Business & Beyond Summit",
+    },
+    {
       src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310407/10_s4yndf.jpg",
       alt: "Event moment 1",
       caption: "Avoid Tax Traps Workshop",
     },
+
     {
       src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310407/13_dullte.jpg",
       alt: "Event moment 2",
@@ -457,11 +463,7 @@ export default function PageEvent() {
       alt: "Event moment 1",
       caption: "Avoid Tax Traps Workshop",
     },
-    {
-      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310409/2_eohv52.jpg",
-      alt: "Event moment 2",
-      caption: "Business & Beyond Summit",
-    },
+
     {
       src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310409/20_tvmpcn.jpg",
       alt: "Event moment 3",
