@@ -179,7 +179,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Loader2, Search, X } from "lucide-react";
+import { Loader2, Search} from "lucide-react";
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -273,10 +273,10 @@ export default function ConsultationAdminPage() {
     setIsDialogOpen(true);
   };
 
-  const handleCloseDialog = () => {
-    setIsDialogOpen(false);
-    setSelectedConsultation(null);
-  };
+  // const handleCloseDialog = () => {
+  //   setIsDialogOpen(false);
+  //   setSelectedConsultation(null);
+  // };
 
   return (
     <div className="p-6 space-y-6">

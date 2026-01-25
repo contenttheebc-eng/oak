@@ -1,5 +1,5 @@
 import { Separator } from "@radix-ui/react-separator";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -35,6 +35,13 @@ export default function Footer() {
               align vision with execution, and achieve sustainable results
               faster and smarter.
             </p>
+            <a
+              href="tel:+4407447043025"
+              className="flex items-center gap-2 hover:text-amber-300 transition-colors font-thin"
+            >
+              <Phone className="h-4 w-4" />
+              +44 07447043025
+            </a>
           </div>
 
           <div>

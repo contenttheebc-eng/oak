@@ -117,11 +117,11 @@
 import { NextResponse } from "next/server";
 import mongooseConnect from "@/lib/mongooseConnect";
 import Attendee from "@/models/Event"; // adjust path if needed
-import { Resend } from "resend";
-import { EmailTemplate } from "@/components/email-template";
-import emailjs from "@emailjs/browser";
+// import { Resend } from "resend";
+// import { EmailTemplate } from "@/components/email-template";
+// import emailjs from "@emailjs/browser";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Handle POST (register attendee)
 export async function POST(req: Request) {

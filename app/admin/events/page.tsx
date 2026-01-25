@@ -252,10 +252,10 @@ export default function EventsAdminPage() {
     setIsDialogOpen(true);
   };
 
-  const handleCloseDialog = () => {
-    setIsDialogOpen(false);
-    setSelectedAttendee(null);
-  };
+  // const handleCloseDialog = () => {
+  //   setIsDialogOpen(false);
+  //   setSelectedAttendee(null);
+  // };
 
   return (
     <div className="p-6 space-y-6">

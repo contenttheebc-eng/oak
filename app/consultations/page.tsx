@@ -9,16 +9,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 
 import {
-  Calendar,
-  ChevronRight,
+
   ArrowRight,
   Phone,
   Target,
   Users,
-  Clock,
 } from "lucide-react";
 import ConsultationForm from "@/components/ConsultForm";
 import { useState } from "react";
