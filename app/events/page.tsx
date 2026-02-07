@@ -11,13 +11,15 @@ import { Badge } from "@/components/ui/badge";
 
 import {
   Calendar,
-  ChevronRight,
   ArrowRight,
   Users,
   Clock,
 } from "lucide-react";
+import EventRegistrationFormNew from "@/components/EventRegistrationFormNew";
+import { useState } from "react";
 
 export default function PageEvent() {
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
 
 
 
@@ -213,7 +215,7 @@ export default function PageEvent() {
       <section className="py-10 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-12">
-            UpcomingTrainings & Events
+            Trainings & Events
           </h2>
 
           <div className="space-y-8">
@@ -248,10 +250,16 @@ export default function PageEvent() {
                   <div className="flex flex-col gap-1 text-gray-600">
                     <div className="flex items-center">
                       <Calendar className="h-5 w-5 mr-2" />
-                      📅 26th February
+                      📅 Thursday, 26th February 2026
                     </div>
                     <div className="flex items-center">
                       📍 London
+                    </div>
+                    <div className="flex items-center">
+                      ⏰ 11am [GMT]
+                    </div>
+                    <div className="flex items-center">
+                      🎫 Attendance is strictly by registration
                     </div>
                     <div className="flex items-center">
                       ⏳ Limited seats available
@@ -261,57 +269,27 @@ export default function PageEvent() {
 
                 <div className="text-sm md:text-base text-gray-700 mb-6 leading-relaxed space-y-4">
                   <p>
-                    At our 2025 Business & Beyond Workshop, we didn&apos;t just host conversations, we created real transformation.
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <ChevronRight className="h-5 w-5 text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
-                      We watched ideas become registered businesses.
-                    </li>
-                    <li className="flex items-start">
-                      <ChevronRight className="h-5 w-5 text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
-                      We saw struggling organisations restructure for clarity and better service delivery.
-                    </li>
-                    <li className="flex items-start">
-                      <ChevronRight className="h-5 w-5 text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
-                      We helped leaders understand how to align people, processes, and performance for real results.
-                    </li>
-                    <li className="flex items-start">
-                      <ChevronRight className="h-5 w-5 text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
-                      And professionals walked away better positioned for growth, visibility, and long-term success.
-                    </li>
-                  </ul>
-                  <p className="font-semibold text-gray-900">
-                    It wasn&apos;t theory. It wasn&apos;t motivation. It was execution, structure, and impact.
+                    At the first edition of Business & Beyond, we saw ideas become incorporated businesses, struggling structures transform into functional teams, and professionals gain clarity for sustainable growth.
                   </p>
                   <p>
-                    Now, we&apos;re building on that momentum.
+                    Business & Beyond II builds on that momentum, focusing on current business trends, emerging tools, and practical strategies required to build future-ready organisations.
                   </p>
-                </div>
-
-                <div className="mb-6 p-4 bg-amber-50 rounded-lg border border-amber-200">
-                  <p className="text-gray-800 font-medium mb-2">
-                    This is for founders, business owners, professionals, and leaders who are ready to move from intention to implementation, and from vision to structure.
-                  </p>
-                  <p className="text-amber-800 font-semibold">
-                    If growth is your goal, this room is for you.
+                  <p className="font-semibold text-gray-900">
+                    This workshop is for business owners, managers, founders, and professionals who are intentional about growth, structure, and long-term relevance.
                   </p>
                 </div>
 
                 <div className="mb-6 text-sm md:text-base">
-                  <p className="text-gray-700">
-                    <strong>Access:</strong> Strictly by registration
-                  </p>
-                  <p className="text-gray-700">
-                    📩 To register, email: <a href="mailto:bookings@oakssconsult.co.uk" className="text-amber-600 hover:text-amber-700 underline">bookings@oakssconsult.co.uk</a>
+                  <p className="text-gray-700 mb-2">
+                    To participate, send the word &apos;Invite&apos; to <a href="mailto:bookings@oakssconsult.co.uk" className="text-amber-600 hover:text-amber-700 underline">bookings@oakssconsult.co.uk</a>
                   </p>
                 </div>
 
                 <Button
                   className="bg-amber-600 hover:bg-amber-700 text-white"
-                  onClick={() => window.location.href = 'mailto:bookings@oakssconsult.co.uk?subject=Registration for Business & Beyond II'}
+                  onClick={() => setIsRegistrationOpen(true)}
                 >
-                  Register via Email
+                  Register Here
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>
@@ -521,6 +499,10 @@ export default function PageEvent() {
         </div>
       </section>
 
+      <EventRegistrationFormNew
+        isOpen={isRegistrationOpen}
+        onClose={() => setIsRegistrationOpen(false)}
+      />
     </>
   );
 }

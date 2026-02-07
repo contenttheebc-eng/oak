@@ -8,9 +8,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
+import { ArrowRight, ChevronDown, ChevronUp, Phone } from "lucide-react";
 import WorkCarousel from "@/components/WorkCarousel";
 import Link from "next/link";
+import BookCallForm from "@/components/BookCallForm";
 
 const CollapsibleSection = ({
   title,
@@ -40,6 +41,14 @@ const CollapsibleSection = ({
 };
 
 const OakssConsultWebsite = () => {
+  const [isBookCallOpen, setIsBookCallOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState("");
+
+  const handleBookCall = (service: string) => {
+    setSelectedService(service);
+    setIsBookCallOpen(true);
+  };
+
   const HomePage = () => (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -58,8 +67,7 @@ const OakssConsultWebsite = () => {
               <span className="text-amber-300">Building Teams</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8  leading-relaxed md:w-3/4">
-              Practical Management, Training & Consultation for Organisations,
-              Institutions, Businesses, and Teams
+              Strategic Management and Business Consultancy, Training, and Advisory Services for Organisations, Institutions, and Teams
             </p>
             <div className="flex  gap-4">
               <Link
@@ -376,7 +384,7 @@ const OakssConsultWebsite = () => {
                   Business Growth Strategy & Management
                 </CardTitle>
                 <CardDescription className="space-y-3 mt-3">
-                  <CollapsibleSection title="1. Business Growth Trainings">
+                  <CollapsibleSection title="1. Strategic Management Training">
                     <p className="text-gray-600 text-sm">
                       Workshops, short courses, and bespoke training for team
                       managers, leaders, behavioural leadership, and performance
@@ -384,7 +392,7 @@ const OakssConsultWebsite = () => {
                     </p>
                   </CollapsibleSection>
 
-                  <CollapsibleSection title="2. Brand/Business Portfolio Management [BPM]">
+                  <CollapsibleSection title="2. Brand/Business Portfolio Marketing [BPM]">
                     <div className="space-y-3 text-sm">
                       <div className="border-l-2 border-amber-500 pl-3">
                         <h5 className="font-medium text-gray-800">
@@ -429,6 +437,13 @@ const OakssConsultWebsite = () => {
                     </div>
                   </CollapsibleSection>
                 </CardDescription>
+                <button
+                  onClick={() => handleBookCall("bpm")}
+                  className="mt-4 flex items-center gap-2 text-amber-600 hover:text-amber-700 font-medium text-sm"
+                >
+                  <Phone className="h-4 w-4" />
+                  Book a Call
+                </button>
               </CardContent>
             </Card>
 
@@ -469,6 +484,13 @@ const OakssConsultWebsite = () => {
                     </p>
                   </CollapsibleSection>
                 </CardDescription>
+                <button
+                  onClick={() => handleBookCall("digital-consultation")}
+                  className="mt-4 flex items-center gap-2 text-amber-600 hover:text-amber-700 font-medium text-sm"
+                >
+                  <Phone className="h-4 w-4" />
+                  Book a Call
+                </button>
               </CardContent>
             </Card>
 
@@ -493,6 +515,13 @@ const OakssConsultWebsite = () => {
                     staff accountability systems for your business.
                   </p>
                 </CardDescription>
+                <button
+                  onClick={() => handleBookCall("staff-performance")}
+                  className="mt-4 flex items-center gap-2 text-amber-600 hover:text-amber-700 font-medium text-sm"
+                >
+                  <Phone className="h-4 w-4" />
+                  Book a Call
+                </button>
               </CardContent>
             </Card>
 
@@ -517,6 +546,13 @@ const OakssConsultWebsite = () => {
                     career preparation, and business fundamentals.
                   </p>
                 </CardDescription>
+                <button
+                  onClick={() => handleBookCall("professional-student")}
+                  className="mt-4 flex items-center gap-2 text-amber-600 hover:text-amber-700 font-medium text-sm"
+                >
+                  <Phone className="h-4 w-4" />
+                  Book a Call
+                </button>
               </CardContent>
             </Card>
           </div>
@@ -585,6 +621,11 @@ const OakssConsultWebsite = () => {
   return (
     <div className="min-h-screen">
       <HomePage />
+      <BookCallForm
+        isOpen={isBookCallOpen}
+        onClose={() => setIsBookCallOpen(false)}
+        preselectedService={selectedService}
+      />
     </div>
   );
 };

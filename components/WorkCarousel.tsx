@@ -17,7 +17,7 @@ const features: Feature[] = [
   {
     title: "Experienced Team",
     description:
-      "Led by consultants who have worked across industries, with diverse business environments.",
+      "Led by consultants who have worked across industries, in diverse business environments.",
     image: "/cloudinary/1.jpg",
   },
   {
@@ -35,7 +35,7 @@ const features: Feature[] = [
   {
     title: "Proven Results",
     description:
-      "We have supported clients to increase team productivity, reduce turnover, scale operations.",
+      "We have supported clients to increase team productivity, increase turnover, scale operations.",
     image: "/cloudinary/4.jpg",
   },
   {

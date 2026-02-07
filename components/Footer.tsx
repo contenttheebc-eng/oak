@@ -1,5 +1,5 @@
 import { Separator } from "@radix-ui/react-separator";
-import { Facebook, Instagram, Linkedin, Phone } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -42,12 +42,19 @@ export default function Footer() {
               <Phone className="h-4 w-4" />
               +44 07447043025
             </a>
+            <a
+              href="mailto:office@oakssconsult.co.uk"
+              className="flex items-center gap-2 hover:text-amber-300 transition-colors font-thin mt-2"
+            >
+              <Mail className="h-4 w-4" />
+              office@oakssconsult.co.uk
+            </a>
           </div>
 
           <div>
             <h4 className=" mb-4 text-xl md:text-3xl">Services</h4>
             <ul className="space-y-2 font-thin text-sm md:text-base ">
-              <li>Business Growth Strategy</li>
+              <li>Business Management</li>
               <li>Consulting & Coaching</li>
               <li>Staff Performance</li>
               <li>Training</li>
