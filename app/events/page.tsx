@@ -224,9 +224,9 @@ export default function PageEvent() {
               <CardHeader className="px-3 md:px-6">
                 <div className="mb-4">
                   <img
-                    src="/cloudinary/4.jpg"
+                    src="https://res.cloudinary.com/di2bodp6u/image/upload/v1771964095/poster-image_oaq74j.jpg"
                     alt="Business & Beyond II"
-                    className="w-full h-auto max-h-[500px] object-cover rounded-md object-top"
+                    className="w-full md:w-1/2 h-auto md:max-h-[500px] object-cover rounded-md object-top"
                   />
                 </div>
                 <div className="flex items-center justify-between mb-4">
