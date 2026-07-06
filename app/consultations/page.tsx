@@ -10,13 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import {
-
-  ArrowRight,
-  Phone,
-  Target,
-  Users,
-} from "lucide-react";
+import { ArrowRight, Phone, Target, Users } from "lucide-react";
 import ConsultationForm from "@/components/ConsultForm";
 import { useState } from "react";
 
@@ -34,10 +28,6 @@ export default function PageEvent() {
       <section className="bg-gradient-to-r from-amber-900 to-amber-700 text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">Consultation</h1>
-          <p className="md:text-xl text-amber-100">
-            Stay connected with our workshops and book your consultation
-            sessions
-          </p>
         </div>
       </section>
 
@@ -47,11 +37,11 @@ export default function PageEvent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-6">
-              Consultation & Coaching
+              Consultation
             </h2>
             <p className="md:text-xl text-gray-600 max-w-3xl mx-auto">
               Our consultation portal allows you to connect with our expert
-              consultants for personalized guidance
+              consultants for personalised guidance
             </p>
           </div>
 
@@ -95,7 +85,7 @@ export default function PageEvent() {
                 </p>
                 <Button
                   variant="outline"
-                  className="w-full"
+                  className="w-full  bg-amber-600 hover:bg-amber-700 text-white"
                   onClick={() => handleConsultationClick("coaching")}
                 >
                   Schedule Session
@@ -118,24 +108,13 @@ export default function PageEvent() {
                 </p>
                 <Button
                   variant="outline"
-                  className="w-full"
+                  className="w-full  bg-amber-600 hover:bg-amber-700 text-white"
                   onClick={() => handleConsultationClick("custom-package")}
                 >
                   Get Custom Quote
                 </Button>
               </CardContent>
             </Card>
-          </div>
-
-          <div className="text-center mt-12">
-            <Button
-              size="lg"
-              className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4"
-              onClick={() => handleConsultationClick("")}
-            >
-              Access Consultation Portal
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
           </div>
         </div>
       </section>

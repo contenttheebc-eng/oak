@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <h3 className="text-xl md:text-3xl  mb-4">Oakss Consult Ltd</h3>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 my-3">
               <a
                 href="https://www.instagram.com/oakssconsult?igsh=MTgyeGpubjVldDZ0bw=="
                 className=" hover:text-white transition-colors"
@@ -35,13 +35,7 @@ export default function Footer() {
               align vision with execution, and achieve sustainable results
               faster and smarter.
             </p>
-            <a
-              href="tel:+4407447043025"
-              className="flex items-center gap-2 hover:text-amber-300 transition-colors font-thin"
-            >
-              <Phone className="h-4 w-4" />
-              +44 07447043025
-            </a>
+
             <a
               href="mailto:office@oakssconsult.co.uk"
               className="flex items-center gap-2 hover:text-amber-300 transition-colors font-thin mt-2"
@@ -66,7 +60,7 @@ export default function Footer() {
             <ul className="space-y-2 font-thin text-sm md:text-base ">
               <li>What we Do</li>
               <li>Our Services</li>
-              <li>Testimonials</li>
+              <li>Review</li>
             </ul>
           </div>
         </div>
