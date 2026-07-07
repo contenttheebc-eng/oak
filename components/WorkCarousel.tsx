@@ -30,19 +30,22 @@ const features: Feature[] = [
     title: "Client-Centred Approach",
     description:
       "We tailor programs to your needs; focus on measurable outcomes.",
-    image: "/cloudinary/3.jpg",
+    image:
+      "https://res.cloudinary.com/di2bodp6u/image/upload/v1783071434/BNG04952_trzyed.jpg",
   },
   {
     title: "Proven Results",
     description:
       "We have supported clients to increase team productivity, increase turnover, scale operations.",
-    image: "/cloudinary/4.jpg",
+    image:
+      "https://res.cloudinary.com/di2bodp6u/image/upload/v1783071430/Picture_2_eluej1.jpg",
   },
   {
     title: "Practical & Actionable",
     description:
       "Our trainings are hands-on, real-world tools, not just theory.",
-    image: "/cloudinary/10.jpg",
+    image:
+      "https://res.cloudinary.com/di2bodp6u/image/upload/v1783071411/Staff_performance_qc3uoo.jpg",
   },
 ];
 
@@ -74,7 +77,7 @@ const WorkCarousel: React.FC = () => {
     (index: number): void => {
       api?.scrollTo(index);
     },
-    [api]
+    [api],
   );
 
   return (

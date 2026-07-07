@@ -1,5 +1,4 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -11,21 +10,26 @@ import { Badge } from "@/components/ui/badge";
 
 import {
   Calendar,
-  ArrowRight,
   Users,
   Clock,
 } from "lucide-react";
-import EventRegistrationFormNew from "@/components/EventRegistrationFormNew";
-import { useState } from "react";
 
 export default function PageEvent() {
-  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
 
 
 
   const pastEvents = [
     {
       id: 0,
+      title: "Oakss Consult – Business & Beyond II",
+      date: "February 26, 2026",
+      image: "https://res.cloudinary.com/di2bodp6u/image/upload/v1771964095/poster-image_oaq74j.jpg",
+      description:
+        "Business & Beyond II builds on that momentum, focusing on current business trends, emerging tools, and practical strategies required to build future-ready organisations.",
+      attendees: "500+",
+    },
+    {
+      id: 1,
       title: "Scaling Strategies for SMEs",
       date: "November 13, 2025",
       image: "/cloudinary/clarity.jpg",
@@ -34,7 +38,7 @@ export default function PageEvent() {
       attendees: "500+",
     },
     {
-      id: 1,
+      id: 2,
       title: "Managing Humans, Not Just Roles, to Deliver Goals",
       date: "October 16, 2025",
       image: "/cloudinary/workshop.jpg",
@@ -43,7 +47,7 @@ export default function PageEvent() {
       attendees: "500+",
     },
     {
-      id: 2,
+      id: 3,
       title: "Avoid Tax Traps",
       date: "June 13, 2025",
       image: "/cloudinary/24.jpg",
@@ -51,7 +55,7 @@ export default function PageEvent() {
       attendees: "500+",
     },
     {
-      id: 3,
+      id: 4,
       title: "Business & Beyond",
       date: "May 29, 2025",
       image: "/cloudinary/25.jpg",
@@ -60,7 +64,7 @@ export default function PageEvent() {
       attendees: 355,
     },
     {
-      id: 4,
+      id: 5,
       title: "Business & Beyond",
       date: "May 29, 2025",
       image: "/cloudinary/26.jpg",
@@ -69,7 +73,7 @@ export default function PageEvent() {
       attendees: 355,
     },
     {
-      id: 5,
+      id: 6,
       title: "Business & Beyond",
       date: "May 29, 2025",
       image: "/cloudinary/27.jpg",
@@ -219,119 +223,9 @@ export default function PageEvent() {
           </h2>
 
           <div className="space-y-8">
-            {/* Featured Event - Business & Beyond II */}
-            <Card className="border-l-4 border-l-amber-600 shadow-lg">
-              <CardHeader className="px-3 md:px-6">
-                <div className="mb-4">
-                  <img
-                    src="https://res.cloudinary.com/di2bodp6u/image/upload/v1771964095/poster-image_oaq74j.jpg"
-                    alt="Business & Beyond II"
-                    className="w-full md:w-1/2 h-auto md:max-h-[500px] object-cover rounded-md object-top"
-                  />
-                </div>
-                <div className="flex items-center justify-between mb-4">
-                  <Badge className="bg-amber-100 text-amber-800">
-                    Featured Event
-                  </Badge>
-                  <Badge
-                    variant="outline"
-                    className="text-red-600 border-red-600"
-                  >
-                    Limited Seats
-                  </Badge>
-                </div>
-              </CardHeader>
-
-              <CardContent className="px-3 md:px-6">
-                <CardTitle className="text-lg md:text-2xl text-amber-900 mb-2">
-                  Oakss Consult – Business & Beyond II
-                </CardTitle>
-                <CardDescription className="text-sm md:text-lg mb-4">
-                  <div className="flex flex-col gap-1 text-gray-600">
-                    <div className="flex items-center">
-                      <Calendar className="h-5 w-5 mr-2" />
-                      📅 Thursday, 26th February 2026
-                    </div>
-                    <div className="flex items-center">
-                      📍 London
-                    </div>
-                    <div className="flex items-center">
-                      ⏰ 11am [GMT]
-                    </div>
-                    <div className="flex items-center">
-                      🎫 Attendance is strictly by registration
-                    </div>
-                    <div className="flex items-center">
-                      ⏳ Limited seats available
-                    </div>
-                  </div>
-                </CardDescription>
-
-                <div className="text-sm md:text-base text-gray-700 mb-6 leading-relaxed space-y-4">
-                  <p>
-                    At the first edition of Business & Beyond, we saw ideas become incorporated businesses, struggling structures transform into functional teams, and professionals gain clarity for sustainable growth.
-                  </p>
-                  <p>
-                    Business & Beyond II builds on that momentum, focusing on current business trends, emerging tools, and practical strategies required to build future-ready organisations.
-                  </p>
-                  <p className="font-semibold text-gray-900">
-                    This workshop is for business owners, managers, founders, and professionals who are intentional about growth, structure, and long-term relevance.
-                  </p>
-                </div>
-
-                <div className="mb-6 text-sm md:text-base">
-                  <p className="text-gray-700 mb-2">
-                    To participate, send the word &apos;Invite&apos; to <a href="mailto:bookings@oakssconsult.co.uk" className="text-amber-600 hover:text-amber-700 underline">bookings@oakssconsult.co.uk</a>
-                  </p>
-                </div>
-
-                <Button
-                  className="bg-amber-600 hover:bg-amber-700 text-white"
-                  onClick={() => setIsRegistrationOpen(true)}
-                >
-                  Register Here
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Other Events */}
-            {/* <div className="grid md:grid-cols-2 gap-8">
-              <Card className="hover:shadow-lg transition-shadow duration-300">
-                <CardHeader className="px-3 md:px-6">
-                  <div className="h-52 md:h-64">
-                    <img
-                      src="/cloudinary/23.jpg"
-                      alt="Student Business Readiness Bootcamp"
-                      className="w-full h-full object-cover rounded-md"
-                    />
-                  </div>
-                </CardHeader>
-                <CardContent className="px-3 md:px-6">
-                  <CardTitle className="md:text-xl text-gray-900 mb-2">
-                    Student Business Readiness Bootcamp
-                  </CardTitle>
-                  <CardDescription className="mb-4 text-sm md:text-base">
-                    <div className="flex items-center text-gray-600">
-                      <Calendar className="h-4 w-4 mr-2" />
-                      26 January 2026 - Virtual
-                    </div>
-                  </CardDescription>
-                  <p className="text-gray-700 mb-4 text-sm md:text-base">
-                    Comprehensive bootcamp preparing students for the business
-                    world with essential skills and knowledge.
-                  </p>
-                  <Button
-                    variant="outline"
-                    className="w-full"
-                    onClick={() => handleRegisterClick("student-bootcamp")}
-                    disabled
-                  >
-                    Register Here
-                  </Button>
-                </CardContent>
-              </Card>
-            </div> */}
+            <p className="text-gray-600 text-sm md:text-base">
+              No upcoming events at the moment. Check back soon or browse our past events below.
+            </p>
           </div>
         </div>
       </section>
@@ -499,10 +393,6 @@ export default function PageEvent() {
         </div>
       </section>
 
-      <EventRegistrationFormNew
-        isOpen={isRegistrationOpen}
-        onClose={() => setIsRegistrationOpen(false)}
-      />
     </>
   );
 }
