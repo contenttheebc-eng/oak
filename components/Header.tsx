@@ -60,7 +60,7 @@ export default function Header() {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className="font-medium">
-                  <Link href="/#testimonials">Testimonials</Link>
+                  <Link href="/#reviews">Reviews</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
@@ -131,7 +131,7 @@ export default function Header() {
             className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 rounded-md"
             onClick={() => setIsOpen(false)}
           >
-            Testimonials
+            Reviews
           </Link>
 
           <Link

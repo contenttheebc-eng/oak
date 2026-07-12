@@ -6,9 +6,9 @@ export default function Footer() {
     <footer className="bg-amber-950 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
-          <div className="md:col-span-2">
+          <div className="md:col-span-2 ">
             <h3 className="text-xl md:text-3xl  mb-4">Oakss Consult Ltd</h3>
-            <div className="flex space-x-4 my-3">
+            <div className="flex space-x-4 my-8">
               <a
                 href="https://www.instagram.com/oakssconsult?igsh=MTgyeGpubjVldDZ0bw=="
                 className=" hover:text-white transition-colors"

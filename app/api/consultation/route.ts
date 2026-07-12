@@ -67,6 +67,7 @@ export async function POST(req: Request) {
             template_id: process.env.EMAILJS_CONSULTATION_TEMPLATE_ID,
             user_id: process.env.EMAILJS_PUBLIC_KEY,
             template_params: {
+              to_email: "oakssconsult@gmail.com",
               fullName: name,
               email,
               phone,

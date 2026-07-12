@@ -31,7 +31,7 @@ const features: Feature[] = [
     description:
       "We tailor programs to your needs; focus on measurable outcomes.",
     image:
-      "https://res.cloudinary.com/di2bodp6u/image/upload/v1783071434/BNG04952_trzyed.jpg",
+      "https://res.cloudinary.com/di2bodp6u/image/upload/v1783861532/BNG04952_xsu0ee.jpg",
   },
   {
     title: "Proven Results",
@@ -45,7 +45,7 @@ const features: Feature[] = [
     description:
       "Our trainings are hands-on, real-world tools, not just theory.",
     image:
-      "https://res.cloudinary.com/di2bodp6u/image/upload/v1783071411/Staff_performance_qc3uoo.jpg",
+      "https://res.cloudinary.com/di2bodp6u/image/upload/v1783861521/Staff_performance_hiohte.jpg",
   },
 ];
 

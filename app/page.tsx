@@ -115,7 +115,7 @@ const OakssConsultWebsite = () => {
             </div>
             <div className="h-80 md:h-[420px]">
               <img
-                src="https://res.cloudinary.com/di2bodp6u/image/upload/v1783071432/Picture_1_ltt8ey.png"
+                src="https://res.cloudinary.com/di2bodp6u/image/upload/v1783861537/Picture_1_ixtr9x.png"
                 alt="Who We Are"
                 className="object-cover h-full "
               />
@@ -123,7 +123,7 @@ const OakssConsultWebsite = () => {
 
             <div className="h-80 md:h-[420px]">
               <img
-                src="https://res.cloudinary.com/di2bodp6u/image/upload/v1783071437/BNG05285_fvnycf.jpg"
+                src="https://res.cloudinary.com/di2bodp6u/image/upload/v1783861520/BNG05285_wd4hpr.jpg"
                 alt="Who We Are"
                 className="object-cover h-full "
               />
@@ -187,7 +187,7 @@ const OakssConsultWebsite = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Card className="hover:shadow-lg transition-shadow duration-300">
+            <Card className="hover:shadow-lg transition-shadow duration-300 flex flex-col">
               <CardHeader className="px-3 md:px-6">
                 <div className="h-52 md:h-64">
                   <img
@@ -197,7 +197,7 @@ const OakssConsultWebsite = () => {
                   />
                 </div>
               </CardHeader>
-              <CardContent className="px-3 md:px-6">
+              <CardContent className="px-3 md:px-6 flex flex-col flex-1">
                 <CardTitle className="text-lg md:pt-4">
                   Business Growth Strategy & Management
                 </CardTitle>
@@ -257,7 +257,7 @@ const OakssConsultWebsite = () => {
                 </CardDescription>
                 <button
                   onClick={() => handleBookCall("bpm")}
-                  className="mt-4 flex items-center gap-2 text-amber-600 hover:text-amber-700 font-medium text-sm"
+                  className="mt-auto pt-4 flex items-center gap-2 text-amber-600 hover:text-amber-700 font-medium text-sm"
                 >
                   <Phone className="h-4 w-4" />
                   Book a Call
@@ -265,7 +265,7 @@ const OakssConsultWebsite = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow duration-300">
+            <Card className="hover:shadow-lg transition-shadow duration-300 flex flex-col">
               <CardHeader className="px-3 md:px-6">
                 <div className="h-52 md:h-64">
                   <img
@@ -276,7 +276,7 @@ const OakssConsultWebsite = () => {
                 </div>
               </CardHeader>
 
-              <CardContent className="px-3 md:px-6">
+              <CardContent className="px-3 md:px-6 flex flex-col flex-1">
                 <CardTitle className="text-lg md:pt-4">
                   Consultation Services
                 </CardTitle>
@@ -304,7 +304,7 @@ const OakssConsultWebsite = () => {
                 </CardDescription>
                 <button
                   onClick={() => handleBookCall("digital-consultation")}
-                  className="mt-4 flex items-center gap-2 text-amber-600 hover:text-amber-700 font-medium text-sm"
+                  className="mt-auto pt-4 flex items-center gap-2 text-amber-600 hover:text-amber-700 font-medium text-sm"
                 >
                   <Phone className="h-4 w-4" />
                   Book a Call
@@ -312,7 +312,7 @@ const OakssConsultWebsite = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow duration-300">
+            <Card className="hover:shadow-lg transition-shadow duration-300 flex flex-col">
               <CardHeader className="px-3 md:px-6">
                 <div className="h-52 md:h-64">
                   <img
@@ -323,7 +323,7 @@ const OakssConsultWebsite = () => {
                 </div>
               </CardHeader>
 
-              <CardContent className="px-3 md:px-6">
+              <CardContent className="px-3 md:px-6 flex flex-col flex-1">
                 <CardTitle className="text-lg md:pt-4">
                   Staff Performance Operations
                 </CardTitle>
@@ -335,7 +335,7 @@ const OakssConsultWebsite = () => {
                 </CardDescription>
                 <button
                   onClick={() => handleBookCall("staff-performance")}
-                  className="mt-4 flex items-center gap-2 text-amber-600 hover:text-amber-700 font-medium text-sm"
+                  className="mt-auto pt-4 flex items-center gap-2 text-amber-600 hover:text-amber-700 font-medium text-sm"
                 >
                   <Phone className="h-4 w-4" />
                   Book a Call
@@ -343,7 +343,7 @@ const OakssConsultWebsite = () => {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow duration-300">
+            <Card className="hover:shadow-lg transition-shadow duration-300 flex flex-col">
               <CardHeader className="px-3 md:px-6">
                 <div className="h-52 md:h-64">
                   <img
@@ -354,7 +354,7 @@ const OakssConsultWebsite = () => {
                 </div>
               </CardHeader>
 
-              <CardContent className="px-3 md:px-6">
+              <CardContent className="px-3 md:px-6 flex flex-col flex-1">
                 <CardTitle className="text-lg md:pt-4">
                   Training for Students & Emerging Professionals
                 </CardTitle>
@@ -366,7 +366,7 @@ const OakssConsultWebsite = () => {
                 </CardDescription>
                 <button
                   onClick={() => handleBookCall("professional-student")}
-                  className="mt-4 flex items-center gap-2 text-amber-600 hover:text-amber-700 font-medium text-sm"
+                  className="mt-auto pt-4 flex items-center gap-2 text-amber-600 hover:text-amber-700 font-medium text-sm"
                 >
                   <Phone className="h-4 w-4" />
                   Book a Call
@@ -381,7 +381,7 @@ const OakssConsultWebsite = () => {
       <WorkCarousel />
 
       {/* Testimonials */}
-      <section id="testimonials" className="py-10 md:py-20 bg-white">
+      <section id="reviews" className="py-10 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-16">
             <h2 className="text-3xl md:text-5xl text-amber-900 mb-6">

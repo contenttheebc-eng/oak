@@ -12,6 +12,7 @@ import {
   Calendar,
   Users,
   Clock,
+  MapPin,
 } from "lucide-react";
 
 export default function PageEvent() {
@@ -201,6 +202,36 @@ export default function PageEvent() {
       alt: "Event moment 10",
       caption: "Professional Development",
     },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1783071411/Staff_performance_qc3uoo.jpg",
+      alt: "Staff Performance",
+      caption: "Staff Performance",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1783071420/Training_lpkxtj.jpg",
+      alt: "Training",
+      caption: "Training",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1783071430/Picture_2_eluej1.jpg",
+      alt: "Event moment 11",
+      caption: "Event Highlight",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1783071432/Picture_1_ltt8ey.png",
+      alt: "Event moment 12",
+      caption: "Event Highlight",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1783071436/BNG05146_agnokv.jpg",
+      alt: "Event moment 13",
+      caption: "Event Highlight",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1783071437/BNG05285_fvnycf.jpg",
+      alt: "Event moment 14",
+      caption: "Event Highlight",
+    },
   ];
 
   return (
@@ -219,13 +250,39 @@ export default function PageEvent() {
       <section className="py-10 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-12">
-            Trainings & Events
+            Upcoming Events
           </h2>
 
-          <div className="space-y-8">
-            <p className="text-gray-600 text-sm md:text-base">
-              No upcoming events at the moment. Check back soon or browse our past events below.
-            </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+              <CardHeader className="p-0">
+                <div className="h-52 md:h-64">
+                  <img
+                    src="https://res.cloudinary.com/di2bodp6u/image/upload/v1783071437/BNG05285_fvnycf.jpg"
+                    alt="Upcoming Event"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent className="p-4 md:p-6">
+                <Badge className="bg-amber-100 text-amber-800 hover:bg-amber-100 mb-3">
+                  Upcoming
+                </Badge>
+                <CardTitle className="text-lg md:text-xl text-gray-900 mb-2">
+                  Event Title Coming Soon
+                </CardTitle>
+                <CardDescription className="space-y-2 mt-3">
+                  <div className="flex items-center text-gray-600">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    September 24, 2026
+                  </div>
+                  <div className="flex items-center text-gray-600">
+                    <MapPin className="h-4 w-4 mr-2" />
+                    Virtual
+                  </div>
+                </CardDescription>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
