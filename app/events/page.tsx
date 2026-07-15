@@ -278,7 +278,7 @@ export default function PageEvent() {
                   Upcoming
                 </Badge>
                 <CardTitle className="text-lg md:text-xl text-gray-900 mb-2">
-                  TBA
+                  Title: TBA
                 </CardTitle>
                 <CardDescription className="space-y-2 mt-3">
                   <div className="flex items-center text-gray-600">
@@ -289,7 +289,17 @@ export default function PageEvent() {
                     <MapPin className="h-4 w-4 mr-2" />
                     Virtual
                   </div>
+                  <div className="flex items-center text-gray-600">
+                    <Clock className="h-4 w-4 mr-2" />
+                    TBA
+                  </div>
                 </CardDescription>
+                <button
+                  type="button"
+                  className="mt-4 w-full rounded-md bg-amber-700 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-amber-800 transition-colors duration-200 cursor-pointer"
+                >
+                  Register Here
+                </button>
               </CardContent>
             </Card>
           </div>
