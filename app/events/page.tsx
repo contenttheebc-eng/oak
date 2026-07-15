@@ -8,23 +8,16 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-import {
-  Calendar,
-  Users,
-  Clock,
-  MapPin,
-} from "lucide-react";
+import { Calendar, Users, Clock, MapPin } from "lucide-react";
 
 export default function PageEvent() {
-
-
-
   const pastEvents = [
     {
       id: 0,
       title: "Oakss Consult – Business & Beyond II",
       date: "February 26, 2026",
-      image: "https://res.cloudinary.com/di2bodp6u/image/upload/v1771964095/poster-image_oaq74j.jpg",
+      image:
+        "https://res.cloudinary.com/di2bodp6u/image/upload/v1771964095/poster-image_oaq74j.jpg",
       description:
         "Business & Beyond II builds on that momentum, focusing on current business trends, emerging tools, and practical strategies required to build future-ready organisations.",
       attendees: "500+",
@@ -85,6 +78,37 @@ export default function PageEvent() {
   ];
 
   const galleryImages = [
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1783071430/Picture_2_eluej1.jpg",
+      alt: "Event moment 11",
+      caption: "Event Highlight",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1783071432/Picture_1_ltt8ey.png",
+      alt: "Event moment 12",
+      caption: "Event Highlight",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1783071436/BNG05146_agnokv.jpg",
+      alt: "Event moment 13",
+      caption: "Event Highlight",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1783861520/BNG05285_wd4hpr.jpg",
+      alt: "Event moment 14",
+      caption: "Event Highlight",
+    },
+
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1783861521/Staff_performance_hiohte.jpg",
+      alt: "Staff Performance",
+      caption: "Staff Performance",
+    },
+    {
+      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1783861521/Training_mhxkan.jpg",
+      alt: "Training Session",
+      caption: "Training Session",
+    },
     {
       src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1759310409/2_eohv52.jpg",
       alt: "Event moment 2",
@@ -202,37 +226,24 @@ export default function PageEvent() {
       alt: "Event moment 10",
       caption: "Professional Development",
     },
-    {
-      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1783071411/Staff_performance_qc3uoo.jpg",
-      alt: "Staff Performance",
-      caption: "Staff Performance",
-    },
-    {
-      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1783071420/Training_lpkxtj.jpg",
-      alt: "Training",
-      caption: "Training",
-    },
-    {
-      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1783071430/Picture_2_eluej1.jpg",
-      alt: "Event moment 11",
-      caption: "Event Highlight",
-    },
-    {
-      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1783071432/Picture_1_ltt8ey.png",
-      alt: "Event moment 12",
-      caption: "Event Highlight",
-    },
-    {
-      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1783071436/BNG05146_agnokv.jpg",
-      alt: "Event moment 13",
-      caption: "Event Highlight",
-    },
-    {
-      src: "https://res.cloudinary.com/di2bodp6u/image/upload/v1783071437/BNG05285_fvnycf.jpg",
-      alt: "Event moment 14",
-      caption: "Event Highlight",
-    },
   ];
+
+  // Distribute images row-first across columns for masonry layout
+  const distributeToColumns = (
+    images: typeof galleryImages,
+    colCount: number,
+  ) => {
+    const columns: (typeof galleryImages)[] = Array.from(
+      { length: colCount },
+      () => [],
+    );
+    images.forEach((image, i) => {
+      columns[i % colCount].push(image);
+    });
+    return columns;
+  };
+
+  const galleryColumns = distributeToColumns(galleryImages, 3);
 
   return (
     <>
@@ -244,8 +255,6 @@ export default function PageEvent() {
           </p>
         </div>
       </section>
-
-
 
       <section className="py-10 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -269,7 +278,7 @@ export default function PageEvent() {
                   Upcoming
                 </Badge>
                 <CardTitle className="text-lg md:text-xl text-gray-900 mb-2">
-                  Event Title Coming Soon
+                  TBA
                 </CardTitle>
                 <CardDescription className="space-y-2 mt-3">
                   <div className="flex items-center text-gray-600">
@@ -423,33 +432,36 @@ export default function PageEvent() {
             </p>
           </div>
 
-          {/* Masonry Grid */}
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
-            {galleryImages.map((image, index) => (
-              <div
-                key={index}
-                className="break-inside-avoid group relative overflow-hidden rounded-lg cursor-pointer"
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                {image.caption && (
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <p className="text-white text-sm font-medium">
-                        {image.caption}
-                      </p>
-                    </div>
+          {/* Masonry Grid - row-first distribution */}
+          <div className="flex flex-col md:flex-row gap-4">
+            {galleryColumns.map((colImages, colIndex) => (
+              <div key={colIndex} className="flex-1 flex flex-col gap-4">
+                {colImages.map((image, index) => (
+                  <div
+                    key={index}
+                    className="break-inside-avoid group relative overflow-hidden rounded-lg cursor-pointer"
+                  >
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    {image.caption && (
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="absolute bottom-0 left-0 right-0 p-4">
+                          <p className="text-white text-sm font-medium">
+                            {image.caption}
+                          </p>
+                        </div>
+                      </div>
+                    )}
                   </div>
-                )}
+                ))}
               </div>
             ))}
           </div>
         </div>
       </section>
-
     </>
   );
 }

@@ -72,7 +72,7 @@ const OakssConsultWebsite = () => {
             </p>
             <div className="flex  gap-4">
               <Link
-                href="/events"
+                href="/consultations"
                 className="bg-white text-amber-900 hover:bg-amber-50 md:text-lg px-4 md:px-8 py-2 md:py-4 flex"
               >
                 Book a Consultation
