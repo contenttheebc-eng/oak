@@ -283,7 +283,7 @@ export default function PageEvent() {
                 <CardDescription className="space-y-2 mt-3">
                   <div className="flex items-center text-gray-600">
                     <Calendar className="h-4 w-4 mr-2" />
-                    September 24, 2026
+                    January 2027
                   </div>
                   <div className="flex items-center text-gray-600">
                     <MapPin className="h-4 w-4 mr-2" />
