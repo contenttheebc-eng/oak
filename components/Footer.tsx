@@ -68,7 +68,7 @@ export default function Footer() {
         <Separator className="my-8 bg-gray-700" />
 
         <div className="text-sm md:text-base text-center font-thin ">
-          <p>&copy; 2025 Oakss Consult Ltd. All rights reserved.</p>
+          <p suppressHydrationWarning>&copy; {new Date().getFullYear()} Oakss Consult Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>
