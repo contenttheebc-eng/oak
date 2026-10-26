@@ -1,5 +1,6 @@
+import Link from "next/link";
 import { Separator } from "@radix-ui/react-separator";
-import { Facebook, Instagram, Linkedin, Mail, Phone } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -29,11 +30,8 @@ export default function Footer() {
               </a>
             </div>
             <p className=" mb-4 font-thin">
-              We provide practical training, strategic management, and tailored
-              growth strategies to organisations, institutions, businesses,
-              teams, and professionals — helping them optimise performance,
-              align vision with execution, and achieve sustainable results
-              faster and smarter.
+              Oakss Consult is a professional training and business consultancy
+              focused on developing people and strengthening businesses.
             </p>
 
             <a
@@ -48,19 +46,32 @@ export default function Footer() {
           <div>
             <h4 className=" mb-4 text-xl md:text-3xl">Services</h4>
             <ul className="space-y-2 font-thin text-sm md:text-base ">
-              <li>Business Management</li>
-              <li>Consulting & Coaching</li>
-              <li>Staff Performance</li>
-              <li>Training</li>
+              <li>
+                <Link href="/digital-skills-training" className="hover:text-amber-300">
+                  Digital Skills Training
+                </Link>
+              </li>
+              <li>
+                <Link href="/management-systems" className="hover:text-amber-300">
+                  Management Systems
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-xl md:text-3xl mb-4">About</h4>
+            <h4 className="text-xl md:text-3xl mb-4">Company</h4>
             <ul className="space-y-2 font-thin text-sm md:text-base ">
-              <li>What we Do</li>
-              <li>Our Services</li>
-              <li>Review</li>
+              <li>
+                <Link href="/about" className="hover:text-amber-300">
+                  About Oakss
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-amber-300">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

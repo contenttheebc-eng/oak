@@ -18,7 +18,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Oakss Consult",
-  description: "Oakss Consult Website",
+  description:
+    "Oakss Consult helps experienced professionals build digital skills and helps small and medium-sized businesses build management systems to grow.",
 };
 
 export default function RootLayout({
