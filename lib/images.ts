@@ -11,12 +11,11 @@ export const images = {
   businessLeaders: "/cloudinary/22.jpg",
   workshopGroup: "/cloudinary/23.jpg",
   // Stock photos
-  laptopColleagues: unsplash("1573164713988-8665fc963095"),
+  laptopColleagues: unsplash("1551836022-d5d88e9218df"),
   laptopMeeting: unsplash("1517245386807-bb43f82c33c4"),
   confidentProfessional: unsplash("1590650153855-d9e808231d41"),
   processPlanning: unsplash("1552664730-d307ca884978"),
   teamWhiteboard: unsplash("1557804506-669a67965ba0"),
   teamCelebration: unsplash("1600880292203-757bb62b4baf"),
   teamwork: unsplash("1600880292089-90a7e086ee0c"),
-  businessMeeting: unsplash("1556761175-b413da4baf72"),
 };

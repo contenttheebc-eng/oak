@@ -22,7 +22,7 @@ export default function PageHero({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         <div>
           <Eyebrow>{eyebrow}</Eyebrow>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+          <h1 className="text-4xl md:text-5xl xl:text-[3.5rem] font-bold text-gray-900 leading-tight">
             {title} {accent && <span className="text-amber-600">{accent}</span>}
           </h1>
           <div className="mt-6 space-y-4 text-base md:text-lg text-gray-600 leading-relaxed">
