@@ -9,6 +9,8 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
 } from "@/components/ui/navigation-menu";
 
 export default function Header() {
@@ -32,8 +34,8 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden lg:flex">
-            <NavigationMenuList className="space-x-6 xl:space-x-10">
+          <NavigationMenu viewport={false} className="hidden lg:flex">
+            <NavigationMenuList className="space-x-2 xl:space-x-6">
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className="font-medium">
                   <Link href="/#who-we-are">Who we are</Link>
@@ -41,9 +43,27 @@ export default function Header() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuLink asChild className="font-medium">
-                  <Link href="/#services">Our Services</Link>
-                </NavigationMenuLink>
+                <NavigationMenuTrigger className="font-medium">
+                  Our Services
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="w-56">
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link href="/digital-skills-training">
+                          Digital Skills Training
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link href="/management-systems">
+                          Management Systems
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
@@ -67,6 +87,18 @@ export default function Header() {
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className="font-medium">
                   <Link href="/#work-with-us">Why work with us</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild className="font-medium">
+                  <Link href="/about">About</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild className="font-medium">
+                  <Link href="/contact">Contact</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -104,11 +136,19 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/#services"
+            href="/digital-skills-training"
             className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 rounded-md"
             onClick={() => setIsOpen(false)}
           >
-            Our Services
+            Digital Skills Training
+          </Link>
+
+          <Link
+            href="/management-systems"
+            className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 rounded-md"
+            onClick={() => setIsOpen(false)}
+          >
+            Management Systems
           </Link>
 
           <Link
@@ -140,6 +180,22 @@ export default function Header() {
             onClick={() => setIsOpen(false)}
           >
             Why work with us
+          </Link>
+
+          <Link
+            href="/about"
+            className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 rounded-md"
+            onClick={() => setIsOpen(false)}
+          >
+            About
+          </Link>
+
+          <Link
+            href="/contact"
+            className="block px-3 py-2 text-base font-medium text-gray-900 hover:text-gray-600 hover:bg-gray-50 rounded-md"
+            onClick={() => setIsOpen(false)}
+          >
+            Contact
           </Link>
         </div>
       </div>
