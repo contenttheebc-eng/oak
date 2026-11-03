@@ -1,11 +1,6 @@
 "use client";
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import WorkCarousel from "@/components/WorkCarousel";
@@ -38,8 +33,8 @@ const OakssConsultWebsite = () => {
             <p className="text-xl md:text-2xl mb-8  leading-relaxed md:w-3/4">
               Oakss Consult helps experienced professionals build the digital
               skills they need to thrive in a changing workplace, while helping
-              small and medium-sized businesses build the management systems
-              they need to grow.
+              small, medium-sized businesses, large businesses and organisation
+              build the management systems they need to grow.
             </p>
             <div className="flex  gap-4">
               <Link
@@ -184,7 +179,10 @@ const OakssConsultWebsite = () => {
                     remain effective in a changing world of work.
                   </p>
                 </div>
-                <Button asChild className="mt-auto bg-amber-600 hover:bg-amber-700">
+                <Button
+                  asChild
+                  className="mt-auto bg-amber-600 hover:bg-amber-700"
+                >
                   <Link href="/digital-skills-training">
                     Explore Digital Skills Training
                     <ArrowRight className="h-4 w-4" />
@@ -220,12 +218,15 @@ const OakssConsultWebsite = () => {
                   </p>
                   <p>
                     Oakss Consult helps small and medium-sized businesses
-                    develop practical management systems that bring structure
-                    to their people, processes and operations, creating a
-                    stronger foundation for sustainable growth.
+                    develop practical management systems that bring structure to
+                    their people, processes and operations, creating a stronger
+                    foundation for sustainable growth.
                   </p>
                 </div>
-                <Button asChild className="mt-auto bg-amber-600 hover:bg-amber-700">
+                <Button
+                  asChild
+                  className="mt-auto bg-amber-600 hover:bg-amber-700"
+                >
                   <Link href="/management-systems">
                     Explore Management Systems
                     <ArrowRight className="h-4 w-4" />
@@ -295,7 +296,10 @@ const OakssConsultWebsite = () => {
                   confidence to bring that experience into today&rsquo;s
                   workplace.
                 </p>
-                <Button asChild className="mt-auto bg-amber-600 hover:bg-amber-700">
+                <Button
+                  asChild
+                  className="mt-auto bg-amber-600 hover:bg-amber-700"
+                >
                   <Link href="/digital-skills-training">
                     Digital Skills Training
                     <ArrowRight className="h-4 w-4" />
@@ -317,7 +321,10 @@ const OakssConsultWebsite = () => {
                   You have built the business. We help you build the systems
                   that allow it to grow beyond the way you currently operate.
                 </p>
-                <Button asChild className="mt-auto bg-amber-600 hover:bg-amber-700">
+                <Button
+                  asChild
+                  className="mt-auto bg-amber-600 hover:bg-amber-700"
+                >
                   <Link href="/management-systems">
                     Management Systems
                     <ArrowRight className="h-4 w-4" />

@@ -29,7 +29,7 @@ export default function Footer() {
                 <Facebook className="h-5 w-5" />
               </a>
             </div>
-            <p className=" mb-4 font-thin">
+            <p className=" mb-4 font-thin max-w-md">
               We provide practical training, strategic management, and tailored
               growth strategies to organisations, institutions, businesses,
               teams, and professionals — helping them optimise performance,
