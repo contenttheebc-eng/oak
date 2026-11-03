@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Separator } from "@radix-ui/react-separator";
 import { Facebook, Instagram, Linkedin, Mail, Phone } from "lucide-react";
 
@@ -28,7 +29,7 @@ export default function Footer() {
                 <Facebook className="h-5 w-5" />
               </a>
             </div>
-            <p className=" mb-4 font-thin">
+            <p className=" mb-4 font-thin max-w-md">
               We provide practical training, strategic management, and tailored
               growth strategies to organisations, institutions, businesses,
               teams, and professionals — helping them optimise performance,
@@ -48,10 +49,12 @@ export default function Footer() {
           <div>
             <h4 className=" mb-4 text-xl md:text-3xl">Services</h4>
             <ul className="space-y-2 font-thin text-sm md:text-base ">
-              <li>Business Management</li>
-              <li>Consulting & Coaching</li>
-              <li>Staff Performance</li>
-              <li>Training</li>
+              <li>
+                <Link href="/digital-skills-training">Digital Skills Training</Link>
+              </li>
+              <li>
+                <Link href="/management-systems">Management Systems</Link>
+              </li>
             </ul>
           </div>
 
@@ -61,6 +64,12 @@ export default function Footer() {
               <li>What we Do</li>
               <li>Our Services</li>
               <li>Review</li>
+              <li>
+                <Link href="/about">About Oakss</Link>
+              </li>
+              <li>
+                <Link href="/contact">Contact</Link>
+              </li>
             </ul>
           </div>
         </div>

@@ -26,10 +26,9 @@ interface BookCallFormProps {
 }
 
 const serviceOptions = [
-  { value: "bpm", label: "BPM (Business Portfolio Marketing)" },
-  { value: "digital-consultation", label: "Digital Consultation" },
-  { value: "staff-performance", label: "Staff Performance Training" },
-  { value: "professional-student", label: "Professional and Student Training" },
+  { value: "digital-skills", label: "Digital Skills Training" },
+  { value: "management-systems", label: "Management Systems" },
+  { value: "other", label: "Other" },
 ];
 
 export default function BookCallForm({

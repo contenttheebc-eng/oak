@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/sonner";
+import ScrollReveal from "@/components/ScrollReveal";
 import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
@@ -36,6 +37,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <Toaster />
+        <ScrollReveal />
       </body>
     </html>
   );
